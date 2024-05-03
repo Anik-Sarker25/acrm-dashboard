@@ -1,0 +1,15 @@
+main {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    padding: 20px;
+    transition: .5s;
+    width: calc(100% - 250px);
+}
+main.slide {
+    position: absolute !important;
+    top: 0 !important;
+    left: 70px !important;
+    transition: 1s !important;
+    width: calc(100% - 70px);
+} 
