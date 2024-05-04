@@ -1,6 +1,5 @@
 
 
-$(document).ready(function() {
 
     // Example usage of SweetAlert2
     function fire() {
@@ -22,6 +21,13 @@ $(document).ready(function() {
             }
         })
     }
+
+    window.onload = function() {
+        let currentDate = new Date();
+        let options = { year: 'numeric' };
+        let formattedDate = currentDate.toLocaleDateString('en-US', options);
+        document.getElementById('currentDate').textContent = formattedDate;
+    };
 
     $('.nav-item').on('click', function() {
         let $submenu = $(this).find('.submenu');
@@ -53,7 +59,5 @@ $(document).ready(function() {
         });
     });
 
-
-});
 
 
