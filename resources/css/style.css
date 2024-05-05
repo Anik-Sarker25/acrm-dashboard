@@ -6,7 +6,7 @@
     font-family: 'Mercedes', sans-serif;  
 }
 body {
-    background: #111526;
+    background: var(--main-body-bg-color);
 }
 :root {
     --color: #ffffff;
@@ -25,10 +25,13 @@ body {
     --sidebar-bg-color: #171B2E;
     --sidebar-scrollbar-bg-color: #555555;
     --main-header-bg-color: linear-gradient(to right, #171C31, #272b45);
+    --single-bg-color: #272b45;
+    --main-header-bg-color-text: linear-gradient(to right, #171C31, #272b45) text;
     --main-header-color: #ffffff;
     --main-footer-bg-color: linear-gradient(to right, #171C31, #272b45);
     --main-footer-color: #ffffff;
     --main-body-color: #ffffff;
+    --main-body-bg-color: #111526;
     --input-color: #ffffff;
     --input-border-color: #292e4d;
     --input-bg-color: transparent;
@@ -36,6 +39,10 @@ body {
     --card-bg-color: #171B2E;
     --text-muted-color: #88888b;
     --container-padding: 10px 20px;
+    --link-item-padding: 8px 16px 8px 32px;
+    --link-item-padding-two: 8px 16px;
+    --link-font-size: 14px;
+    --link-heading-font-size: 16px;
 }
 
 /* =========== sidebar start =========== */
@@ -92,7 +99,7 @@ body {
 #sidebar .header a {
     text-decoration: none;
     color: var(--color);
-    font-size: 20px;                                     
+    font-size: 20px;                                    
 }
 #sidebar .header #collapse-button {
     color: var(--color);
@@ -106,6 +113,7 @@ body {
     border-radius: 5px;
     position: relative;
     padding: 8px 16px 8px 32px;
+    font-size: var(--link-font-size);
 }
 #sidebar .nav-item a.nav-link i {
     vertical-align: middle;
@@ -117,7 +125,7 @@ body {
     margin-bottom: 8px;
     padding: 8px 16px 8px 32px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: var(--link-heading-font-size);
     color: transparent;
     background: var(--nav-heading-color);
 }
@@ -190,7 +198,7 @@ main .main-header {
     position: sticky;
     top: 0;
     width: 100%;
-    z-index: 9999;
+    z-index: 998;
 }
 input[type="text"],
 input[type="search"],
@@ -228,6 +236,29 @@ input[type="search"]::placeholder {
     border: none;
     padding: 5px 16px;
 }
+.profile-menu .dropdown .dropdown-menu {
+    padding: 0;
+    background: transparent;
+    border: 2px solid var(--divider-color);
+    transform: translate3d(0px, 54.8px, 0px) !important;
+    border-radius: 11px;
+}
+.profile-menu .dropdown .dropdown-menu::after {
+    content: '';
+    height: 20px;
+    width: 20px;
+    background: var(--single-bg-color);
+    position: absolute;
+    top: -11px;
+    right: 10px; 
+    border-top: 2px solid var(--divider-color);
+    border-left: 2px solid var(--divider-color);
+    transform: rotate(45deg);
+    z-index: -1;
+}
+.profile-menu .dropdown .dropdown-toggle::after {
+    content: none;
+}
 .profile-menu .dropdown a img {
     width: 40px;
     height: 40px;
@@ -235,8 +266,41 @@ input[type="search"]::placeholder {
     object-fit: cover;
     background: white;
 }
-.profile-menu .dropdown .dropdown-toggle::after {
-    content: none;
+.profile-menu .dropdown .dropdown-menu .card {
+    width: 250px;
+    background: var(--main-header-bg-color);
+    padding: 20px 0 10px;
+    border: none;
+    border-radius: 10px;
+}
+.profile-menu .dropdown .dropdown-menu .card * {
+    color: var(--main-header-color);
+    font-size: var(--link-font-size);
+}
+.profile-menu .dropdown .dropdown-menu .card ul {
+    padding: 0;
+    list-style: none;
+}
+.profile-menu .dropdown .dropdown-menu .card .dropdown-item {
+    padding: var(--link-item-padding-two);
+    border-radius: 5px;
+}
+.profile-menu .dropdown .dropdown-menu .card .dropdown-item:hover {
+    background: var(--main-body-bg-color);
+}
+.profile-menu .dropdown .dropdown-menu .card .menu-divider {
+    border: none;
+    height: 2px;
+    margin: 5px 0;
+    background-color: var(--divider-color);
+}
+.profile-menu .dropdown .dropdown-menu .card .logout-btn {
+    background: var(--main-body-bg-color);
+    display: block;
+}
+.profile-menu .dropdown .dropdown-menu .card .logout-btn:hover {
+    background: var(--single-bg-color);
+    display: block;
 }
 /* =========== main header end =========== */
 
@@ -252,10 +316,10 @@ main .main-footer {
     background-image: var(--main-footer-bg-color);
     color: var(--main-footer-color);
     padding: var(--container-padding);
-    position: sticky;
+    position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 9999;
+    z-index: 998;
 }
 /* =========== main footer end =========== */
 
