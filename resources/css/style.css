@@ -10,6 +10,7 @@ body {
 }
 :root {
     --color: #ffffff;
+    --color-red: #ed0c3d;
     --nav-link-color: #ffffff;
     --nav-heading-color: linear-gradient(to bottom, #66478f, #fefeff) text;
     --nav-link-bg-color: linear-gradient(to bottom, #463063, #3F3065);
@@ -43,6 +44,7 @@ body {
     --link-item-padding-two: 8px 16px;
     --link-font-size: 14px;
     --link-heading-font-size: 16px;
+    --icon-margin-right: 8px;
 }
 
 /* =========== sidebar start =========== */
@@ -117,6 +119,7 @@ body {
 }
 #sidebar .nav-item a.nav-link i {
     vertical-align: middle;
+    margin-right: var(--icon-margin-right);
 }
 #sidebar .nav-item a.nav-heading {
     display: block;
@@ -236,14 +239,32 @@ input[type="search"]::placeholder {
     border: none;
     padding: 5px 16px;
 }
-.profile-menu .dropdown .dropdown-menu {
+.main-header .dash-info-bar {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.main-header .dash-info-bar .profile-menu,
+.main-header .dash-info-bar .language-menu,
+.main-header .dash-info-bar .notification-menu,
+.main-header .dash-info-bar .appearance-menu {
+    padding: 0 5px;
+}
+.profile-menu .dropdown .dropdown-menu,
+.language-menu .dropdown .dropdown-menu,
+.notification-menu .dropdown .dropdown-menu,
+.appearance-menu .dropdown .dropdown-menu {
+    width: 250px;
     padding: 0;
     background: transparent;
     border: 2px solid var(--divider-color);
     transform: translate3d(0px, 54.8px, 0px) !important;
     border-radius: 11px;
 }
-.profile-menu .dropdown .dropdown-menu::after {
+.profile-menu .dropdown .dropdown-menu::after,
+.language-menu .dropdown .dropdown-menu::after,
+.notification-menu .dropdown .dropdown-menu::after,
+.appearance-menu .dropdown .dropdown-menu::after {
     content: '';
     height: 20px;
     width: 20px;
@@ -256,49 +277,160 @@ input[type="search"]::placeholder {
     transform: rotate(45deg);
     z-index: -1;
 }
-.profile-menu .dropdown .dropdown-toggle::after {
+.profile-menu .dropdown .dropdown-toggle::after,
+.language-menu .dropdown .dropdown-toggle::after,
+.notification-menu .dropdown .dropdown-toggle::after,
+.appearance-menu .dropdown .dropdown-toggle::after {
     content: none;
+}
+.profile-menu .dropdown a,
+.language-menu .dropdown a,
+.notification-menu .dropdown a,
+.appearance-menu .dropdown a {
+    text-decoration: none;
+    color: inherit;
 }
 .profile-menu .dropdown a img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
-    background: white;
+    background: var(--main-body-bg-color);
 }
-.profile-menu .dropdown .dropdown-menu .card {
+.language-menu .dropdown a img,
+.notification-menu .dropdown a img,
+.appearance-menu .dropdown a img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--main-body-color);
+    padding: 5px;
+}
+.profile-menu .dropdown .dropdown-menu ul li a img,
+.language-menu .dropdown .dropdown-menu ul li a img,
+.notification-menu .dropdown .dropdown-menu ul li a img,
+.appearance-menu .dropdown .dropdown-menu ul li a img {
+    width: 32px;
+    max-height: 24px;
+    border-radius: 5px;
+    object-fit: cover;
+    background: var(--main-body-color);
+    padding: 0;
+    margin-right: var(--icon-margin-right);
+}
+.profile-menu .dropdown a .icon,
+.language-menu .dropdown a .icon,
+.notification-menu .dropdown a .icon,
+.appearance-menu .dropdown a .icon {
+    background: var(--main-body-color);
+    padding: 8px 10px 3px;
+    border-radius: 50%;
+    i {
+        font-size: 18px;
+    }
+    span {
+        position: absolute;
+        top: 0;
+        left: 70%;
+        padding: 5px;
+        border-radius: 50%;
+        background: var(--color-red);
+    }
+}
+.profile-menu .dropdown .profile,
+.language-menu .dropdown .profile,
+.notification-menu .dropdown .profile,
+.appearance-menu .dropdown .profile {
+    text-align: center;
+}
+.profile-menu .dropdown .profile img,
+.language-menu .dropdown .profile img,
+.notification-menu .dropdown .profile img,
+.appearance-menu .dropdown .profile img {
+    margin: auto;
+}
+.profile-menu .dropdown .profile span,
+.language-menu .dropdown .profile span,
+.notification-menu .dropdown .profile span,
+.appearance-menu .dropdown .profile span {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.profile-menu .dropdown .dropdown-menu .card,
+.language-menu .dropdown .dropdown-menu .card,
+.notification-menu .dropdown .dropdown-menu .card,
+.appearance-menu .dropdown .dropdown-menu .card {
     width: 250px;
     background: var(--main-header-bg-color);
     padding: 20px 0 10px;
     border: none;
     border-radius: 10px;
 }
-.profile-menu .dropdown .dropdown-menu .card * {
+.notification-menu .dropdown .dropdown-menu,
+.notification-menu .dropdown .dropdown-menu .card {
+    width: 300px;
+}
+.profile-menu .dropdown .dropdown-menu .card *,
+.language-menu .dropdown .dropdown-menu .card *,
+.notification-menu .dropdown .dropdown-menu .card *,
+.appearance-menu .dropdown .dropdown-menu .card * {
     color: var(--main-header-color);
     font-size: var(--link-font-size);
 }
-.profile-menu .dropdown .dropdown-menu .card ul {
+.profile-menu .dropdown .dropdown-menu .card ul,
+.language-menu .dropdown .dropdown-menu .card ul,
+.notification-menu .dropdown .dropdown-menu .card ul,
+.appearance-menu .dropdown .dropdown-menu .card ul {
     padding: 0;
     list-style: none;
 }
-.profile-menu .dropdown .dropdown-menu .card .dropdown-item {
+.profile-menu .dropdown .dropdown-menu .card .dropdown-item,
+.language-menu .dropdown .dropdown-menu .card .dropdown-item,
+.notification-menu .dropdown .dropdown-menu .card .dropdown-item,
+.appearance-menu .dropdown .dropdown-menu .card .dropdown-item {
     padding: var(--link-item-padding-two);
     border-radius: 5px;
 }
-.profile-menu .dropdown .dropdown-menu .card .dropdown-item:hover {
+.profile-menu .dropdown .dropdown-menu .card .dropdown-item i,
+.language-menu .dropdown .dropdown-menu .card .dropdown-item i,
+.notification-menu .dropdown .dropdown-menu .card .dropdown-item i,
+.appearance-menu .dropdown .dropdown-menu .card .dropdown-item i {
+    margin-right: var(--icon-margin-right);
+}
+.profile-menu .dropdown .dropdown-menu .card .dropdown-item:hover,
+.language-menu .dropdown .dropdown-menu .card .dropdown-item:hover,
+.notification-menu .dropdown .dropdown-menu .card .dropdown-item:hover,
+.appearance-menu .dropdown .dropdown-menu .card .dropdown-item:hover {
     background: var(--main-body-bg-color);
 }
-.profile-menu .dropdown .dropdown-menu .card .menu-divider {
+.profile-menu .dropdown .dropdown-menu .card .menu-divider,
+.language-menu .dropdown .dropdown-menu .card .menu-divider,
+.notification-menu .dropdown .dropdown-menu .card .menu-divider,
+.appearance-menu .dropdown .dropdown-menu .card .menu-divider {
     border: none;
     height: 2px;
     margin: 5px 0;
     background-color: var(--divider-color);
 }
-.profile-menu .dropdown .dropdown-menu .card .logout-btn {
+.profile-menu .dropdown .dropdown-menu .card .btn,
+.language-menu .dropdown .dropdown-menu .card .btn,
+.notification-menu .dropdown .dropdown-menu .card .btn,
+.appearance-menu .dropdown .dropdown-menu .card .btn {
     background: var(--main-body-bg-color);
     display: block;
+    margin: 0 10px;
 }
-.profile-menu .dropdown .dropdown-menu .card .logout-btn:hover {
+.profile-menu .dropdown .dropdown-menu .card .btn i,
+.language-menu .dropdown .dropdown-menu .card .btn i,
+.notification-menu .dropdown .dropdown-menu .card .btn i,
+.appearance-menu .dropdown .dropdown-menu .card .btn i {
+    margin-right: var(--icon-margin-right);
+}
+.profile-menu .dropdown .dropdown-menu .card .btn:hover,
+.language-menu .dropdown .dropdown-menu .card .btn:hover,
+.notification-menu .dropdown .dropdown-menu .card .btn:hover,
+.appearance-menu .dropdown .dropdown-menu .card .btn:hover {
     background: var(--single-bg-color);
     display: block;
 }

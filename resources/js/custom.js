@@ -58,6 +58,35 @@
             cpbtn.classList.toggle("m-auto");
         });
     });
+ 
+    // $(document).click(function(e) {
+    //     // Check if the clicked element is outside of the collapse
+    //     if (!$(e.target).closest('.collapse').length) {
+    //       $('.collapse').collapse('hide');
+    //     }
+    //   });
+
+
+    $(document).ready(function() {
+        // Prevent closing main dropdown when clicking on nested dropdown
+        $('.dropdown-menu .dropdown-menu').on('click', function(e) {
+          e.stopPropagation();
+        });
+  
+        // Close main dropdown when clicking outside of it
+        $(document).click(function(e) {
+          if (!$(e.target).closest('.dropdown').length) {
+            $('.dropdown-menu').removeClass('show');
+          }
+        });
+  
+        // Handle click on links inside main dropdown
+        $('.dropdown-menu a.dropdown-item').on('click', function() {
+          $('.dropdown-menu').removeClass('show');
+          // Add your link handling logic here
+        });
+      });
+ 
 
 
 
