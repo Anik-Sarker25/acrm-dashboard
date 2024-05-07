@@ -36,6 +36,8 @@
     });
 
     let sidebar = document.querySelector("#sidebar");
+    let header = document.querySelector(".main-header");
+    let footer = document.querySelector(".main-footer");
     let start = document.querySelector("#sidebar-start");
     let toggler = document.querySelector("#slides");
     let main = document.querySelector("main");
@@ -44,48 +46,48 @@
     toggler.addEventListener("click", () => {
 
         sidebar.classList.toggle("close");
+        header.classList.toggle("slide");
+        footer.classList.toggle("slide");
         main.classList.toggle("slide");
         cpbtn.classList.toggle("m-auto");
 
         start.addEventListener("mouseenter", () => {
             sidebar.classList.remove("close");
+            header.classList.toggle("slide");
+            footer.classList.toggle("slide");
             main.classList.remove("slide");
             cpbtn.classList.remove("m-auto");
         });
         start.addEventListener("mouseleave", () => {
             sidebar.classList.toggle("close");
+            header.classList.toggle("slide");
+            footer.classList.toggle("slide");
             main.classList.toggle("slide");
             cpbtn.classList.toggle("m-auto");
         });
     });
- 
-    // $(document).click(function(e) {
-    //     // Check if the clicked element is outside of the collapse
-    //     if (!$(e.target).closest('.collapse').length) {
-    //       $('.collapse').collapse('hide');
-    //     }
-    //   });
 
-
-    $(document).ready(function() {
+    $(document).ready(function () {
         // Prevent closing main dropdown when clicking on nested dropdown
-        $('.dropdown-menu .dropdown-menu').on('click', function(e) {
-          e.stopPropagation();
+        $(".dropdown-menu .dropdown-menu").on("click", function (e) {
+            e.stopPropagation();
         });
-  
+
         // Close main dropdown when clicking outside of it
-        $(document).click(function(e) {
-          if (!$(e.target).closest('.dropdown').length) {
-            $('.dropdown-menu').removeClass('show');
-          }
+        $(document).click(function (e) {
+            if (!$(e.target).closest(".dropdown").length) {
+                $(".dropdown-menu").removeClass("show");
+            }
         });
-  
+
         // Handle click on links inside main dropdown
-        $('.dropdown-menu a.dropdown-item').on('click', function() {
-          $('.dropdown-menu').removeClass('show');
-          // Add your link handling logic here
-        });
-      });
+        $(".dropdown-menu a, dropdown-menu a.dropdown-item").on(
+            "click",
+            function () {
+                $(".dropdown-menu").removeClass("show");
+            }
+        );
+    });
  
 
 
