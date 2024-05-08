@@ -22,6 +22,22 @@
         })
     }
 
+    // sentence conversion function
+    // window.onload = function() {
+    //     function toSentenceCase(text) {
+    //         let sentences = text.split('. ');
+    //         for (let i = 0; i < sentences.length; i++) {
+    //             let sentence = sentences[i].trim();
+    //             sentences[i] = sentence.charAt(0).toUpperCase() + sentence.slice(1);
+    //         }
+    //         return sentences.join('. ');
+    //     }
+    //     let inputElement = document.getElementById('sentence');
+    //     let inputText = inputElement.textContent;
+    //     let outputText = toSentenceCase(inputText);
+    //     inputElement.innerHTML = outputText;
+    // };
+
     window.onload = function() {
         let currentDate = new Date();
         let options = { year: 'numeric' };
@@ -88,7 +104,7 @@
             }
         );
     });
- 
+
 
 
 
