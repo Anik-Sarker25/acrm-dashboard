@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta description -->
+    <meta name="description" content="">
+    <!-- Meta keywords -->
+    <meta name="keywords" content="">
+    <!-- Meta author -->
+    <meta name="author" content="">
+    <!-- Page Title -->
+    <title>Custom 1.0 | Dashboard</title>
+    <!-- Favicon -->
+    <link rel="shortcut-icon" href="img/favicon.ico">
+    <!-- font-awesome -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> -->
+    <!-- flat Icons -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <!-- Bootstrap CSS -->
+    <link href="resources/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom CSS -->
+    <link href="resources/css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+    <!-- main header start -->
+    <nav class="main-header">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="search-bar">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <!-- <span></span> -->
+                            <span class="input-group-text"><i class="fi fi-rr-search"></i></span>
+                            <input type="search" class="form-control" placeholder="Search...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="dash-info-bar">
+                    <div class="appearance-menu">
+                        <div class="switch-box">
+                            <input type="checkbox" class="checkbox" id="toggle-btn">
+                            <label class="switch" for="toggle-btn">
+                                <i class="fi fi-br-brightness" id="sun"></i>
+                                <i class="fi fi-rr-clouds-moon" id="moon"></i>
+                                <div class="ball"><i class="fi fi-sr-dot-circle"></i></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="notification-menu">
+                        <div class="dropdown">
+                            <a href="javascript::" class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" data-bs-auto-close="outside"><div class="icon"><i class="fi fi-sr-bells"></i><span></span></div></a>
+                            <ul class="dropdown-menu">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="profile">
+                                            <span>20 Notifications</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <ul>
+                                            <hr class="menu-divider">
+                                            <li>
+                                                <div class="notification-item">
+                                                    <div class="d-flex">
+                                                        <div class="img">
+                                                            <img src="resources/images/notification1.png" class="notification-image" width="32px" alt="flag-image">
+                                                        </div>
+                                                        <div class="info">
+                                                            <div class="d-flex justify-content-between">
+                                                                <p class="title">Jane foster</p>
+                                                                <div class="btn-group dropstart">
+                                                                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        <i class="fi fi-sr-grip-dots-vertical"></i>
+                                                                    </button>
+                                                                    <ul class="dropdown-menu">
+                                                                        <li><a class="dropdown-item" href="#"><i class="fi fi-sr-overview"></i>Mark as read</a></li>
+                                                                        <li><a class="dropdown-item" href="#"><i class="fi fi-sr-checkbox"></i>Approve</a></li>
+                                                                        <li><a class="dropdown-item" href="#"><i class="fi fi-sr-square-x"></i>Reject</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="sub-title">
+                                                                <i class="fi fi-sr-messages"></i>
+                                                                mentioned you in a comment.
+                                                                <span>10m</span>
+                                                            </div>
+                                                            <p class="time">Today at 5:30pm</p>
+                                                        </div>
+
+                                                        <div class="read-icon">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="notification-item">
+                                                    <div class="d-flex">
+                                                        <div class="img">
+                                                            <img src="resources/images/notification2.png" class="notification-image" width="32px" alt="flag-image">
+                                                        </div>
+                                                        <div class="info">
+                                                            <div class="d-flex justify-content-between">
+                                                                <p class="title">Jane foster</p>
+                                                                <div class="btn-group dropstart">
+                                                                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        <i class="fi fi-sr-grip-dots-vertical"></i>
+                                                                    </button>
+                                                                    <ul class="dropdown-menu">
+                                                                        <li><a class="dropdown-item" href="#"><i class="fi fi-sr-overview"></i>Mark as read</a></li>
+                                                                        <li><a class="dropdown-item" href="#"><i class="fi fi-sr-checkbox"></i>Approve</a></li>
+                                                                        <li><a class="dropdown-item" href="#"><i class="fi fi-sr-square-x"></i>Reject</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="sub-title">
+                                                                <i class="fi fi-sr-messages"></i>
+                                                                mentioned you in a comment.
+                                                                <span>10m</span>
+                                                            </div>
+                                                            <p class="time">Today at 5:30pm</p>
+                                                        </div>
+
+                                                        <div class="read-icon">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="notification-item">
+                                                    <div class="d-flex">
+                                                        <div class="img">
+                                                            <img src="resources/images/notification3.png" class="notification-image" width="32px" alt="flag-image">
+                                                        </div>
+                                                        <div class="info">
+                                                            <div class="d-flex justify-content-between">
+                                                                <p class="title">Jane foster</p>
+                                                                <div class="btn-group dropstart">
+                                                                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        <i class="fi fi-sr-grip-dots-vertical"></i>
+                                                                    </button>
+                                                                    <ul class="dropdown-menu">
+                                                                        <li><a class="dropdown-item" href="#"><i class="fi fi-sr-overview"></i>Mark as read</a></li>
+                                                                        <li><a class="dropdown-item" href="#"><i class="fi fi-sr-checkbox"></i>Approve</a></li>
+                                                                        <li><a class="dropdown-item" href="#"><i class="fi fi-sr-square-x"></i>Reject</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="sub-title">
+                                                                <i class="fi fi-sr-messages"></i>
+                                                                mentioned you in a comment.
+                                                                <span>10m</span>
+                                                            </div>
+                                                            <p class="time">Today at 5:30pm</p>
+                                                        </div>
+
+                                                        <div class="read-icon">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="notification-item">
+                                                    <div class="d-flex">
+                                                        <div class="img">
+                                                            <img src="resources/images/notification1.png" class="notification-image" width="32px" alt="flag-image">
+                                                        </div>
+                                                        <div class="info">
+                                                            <div class="d-flex justify-content-between">
+                                                                <p class="title">Jane foster</p>
+                                                                <div class="btn-group dropstart">
+                                                                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        <i class="fi fi-sr-grip-dots-vertical"></i>
+                                                                    </button>
+                                                                    <ul class="dropdown-menu">
+                                                                        <li><a class="dropdown-item" href="#"><i class="fi fi-sr-overview"></i>Mark as read</a></li>
+                                                                        <li><a class="dropdown-item" href="#"><i class="fi fi-sr-checkbox"></i>Approve</a></li>
+                                                                        <li><a class="dropdown-item" href="#"><i class="fi fi-sr-square-x"></i>Reject</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="sub-title">
+                                                                <i class="fi fi-sr-messages"></i>
+                                                                mentioned you in a comment.
+                                                                <span>10m</span>
+                                                            </div>
+                                                            <p class="time">Today at 5:30pm</p>
+                                                        </div>
+
+                                                        <div class="read-icon">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="notification-item">
+                                                    <div class="d-flex">
+                                                        <div class="img">
+                                                            <img src="resources/images/notification1.png" class="notification-image" width="32px" alt="flag-image">
+                                                        </div>
+                                                        <div class="info">
+                                                            <div class="d-flex justify-content-between">
+                                                                <p class="title">Jane foster</p>
+                                                                <div class="btn-group dropstart">
+                                                                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        <i class="fi fi-sr-grip-dots-vertical"></i>
+                                                                    </button>
+                                                                    <ul class="dropdown-menu">
+                                                                        <li><a class="dropdown-item" href="#"><i class="fi fi-sr-overview"></i>Mark as read</a></li>
+                                                                        <li><a class="dropdown-item" href="#"><i class="fi fi-sr-checkbox"></i>Approve</a></li>
+                                                                        <li><a class="dropdown-item" href="#"><i class="fi fi-sr-square-x"></i>Reject</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="sub-title">
+                                                                <i class="fi fi-sr-messages"></i>
+                                                                mentioned you in a comment.
+                                                                <span>10m</span>
+                                                            </div>
+                                                            <p class="time">Today at 5:30pm</p>
+                                                        </div>
+
+                                                        <div class="read-icon">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer px-3 py-1">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="history"><a href="#">Notifications History</a></span>
+                                            <span class="history"><a href="#">Mark all as read</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="language-menu">
+                        <div class="dropdown">
+                            <a href="javascript::" class="dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"><img src="resources/images/english.png" alt="flag-image"></a>
+                            <ul class="dropdown-menu">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="profile">
+                                            <span>Choose Language</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <ul>
+                                            <hr class="menu-divider">
+                                            <li><a href="#" class="dropdown-item"><img src="resources/images/bangla.png" alt="flag-image">Bangla</a></li>
+                                            <li><a href="#" class="dropdown-item"><img src="resources/images/english.png" alt="flag-image">English</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="profile-menu">
+                        <div class="dropdown">
+                            <a href="javascript::" class="dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"><img src="resources/images/th (23).jpg" alt="profile-image"></a>
+                            <ul class="dropdown-menu">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="profile">
+                                            <a href="javascript::"><img src="resources/images/profile.png" alt="profile-image" class="d-block mb-1"></a>
+                                            <span>Md Anik Sarker</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <ul>
+                                            <hr class="menu-divider">
+                                            <li><a href="addClient.html" class="dropdown-item"><i class="fi fi-sr-user-pen"></i>Profile</a></li>
+                                            <li><a href="#" class="dropdown-item"><i class="fi fi-tr-dashboard"></i>Dashboard</a></li>
+                                            <li><a href="#" class="dropdown-item"><i class="fi fi-sr-file-edit"></i>Posts & Activity</a></li>
+                                            <li><a href="#" class="dropdown-item"><i class="fi fi-sr-customization-cogwheel"></i>Settings & Privacy</a></li>
+                                            <li><a href="#" class="dropdown-item"><i class="fi fi-sr-user-headset"></i>Help Center</a></li>
+                                            <hr class="menu-divider">
+                                            <li><a href="#" class="dropdown-item"><i class="fi fi-sr-user-add"></i>Add another account</a></li>
+                                            <hr class="menu-divider">
+                                            <a href="#" type="button" class="btn"><i class="fi fi-br-exit"></i>Log Out</a>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- main header end -->
+
+    <!-- Sidebar start -->
+    <aside id="sidebar" class="sidebar">
+        <div class="header">
+            <a href="index.html" class="text">CRM Dashboard</a>
+            <div id="collapse-button">
+                <i class="fi fi-br-menu-burger" id="slides"></i>
+            </div>
+        </div>
+        <div class="position-sticky" id="sidebar-start">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="fi fi-tr-dashboard"></i>
+                        <span class="text">Dashboard</span>
+                    </a>
+                </li>
+                
+                <hr class="menu-divider">
+
+                <li class="nav-item">
+                    <a class="nav-heading text" href="javascript::">
+                        Widgets
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link active" href="widgets.html">
+                        <i class="fi fi-sr-transformation-block"></i>
+                        <span class="text">Widgets</span>
+                    </a>
+                </li>
+
+                <hr class="menu-divider">
+
+                <li class="nav-item">
+                    <a class="nav-heading text" href="javascript::">
+                        Accounts
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse">
+                        <i class="fi fi-br-portrait"></i>
+                        <span class="text">Account</span>
+                    </a>
+                    <ul class="submenu collapse">
+                        <li><a class="nav-link" href="#">Add New</a></li>
+                        <li><a class="nav-link" href="#">Account List</a></li>
+                        <li><a class="nav-link" href="#">Balance Transfer</a></li>
+                        <li><a class="nav-link" href="#">Transfer List</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse">
+                        <i class="fi fi-sr-document"></i>
+                        <span class="text">Receive</span>
+                    </a>
+                    <ul class="submenu collapse">
+                        <li><a class="nav-link" href="#">Add New</a></li>
+                        <li><a class="nav-link" href="#">Receive List</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse">
+                        <i class="fi fi-sr-file"></i>
+                        <span class="text">Expense</span>
+                    </a>
+                    <ul class="submenu collapse">
+                        <li><a class="nav-link" href="#">Add Expense</a></li>
+                        <li><a class="nav-link" href="#">Expense List</a></li>
+                    </ul>
+                </li>
+                
+                <hr class="menu-divider">
+
+                <li class="nav-item">
+                    <a class="nav-heading text" href="javascript::">
+                        Products
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse">
+                        <i class="fi fi-br-supplier-alt"></i>
+                        <span class="text">Product</span>
+                    </a>
+                    <ul class="submenu collapse">
+                        <li><a class="nav-link" href="#">Add Product</a></li>
+                        <li><a class="nav-link" href="#">Product List</a></li>
+                        <li><a class="nav-link" href="#">Product Group</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <!-- Sidebar end -->
+
+    <!-- Main content area start -->
+    <main id="main-content">
+        <!-- main section start -->
+        <div class="main-section">
+            <!-- single card  -->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card single-box">
+                        <div class="card-body">
+                            <div class="style1">
+                                <a href="#"><i class="fi fi-sr-messages"></i></a>
+                                <p>Message</p>
+                            </div>
+                            <div class="right">
+                                <span>10%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card single-box">
+                        <div class="card-body">
+                            <div class="style2">
+                                <a href="#"><i class="fi fi-sr-envelope-dot"></i></a>
+                                <p>Email</p>
+                            </div>
+                            <div class="right">
+                                <span>30%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card single-box">
+                        <div class="card-body">
+                            <div class="style3">
+                                <a href="#"><i class="fi fi-br-portrait"></i></a>
+                                <p>Accounts</p>
+                            </div>
+                            <div class="right">
+                                <span>30,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card single-box">
+                        <div class="card-body">
+                            <div class="style4">
+                                <a href="#"><i class="fi fi-br-supplier-alt"></i></a>
+                                <p>Products</p>
+                            </div>
+                            <div class="right">
+                                <span>20,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- single card gradient -->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card single-box bg1">
+                        <div class="card-body">
+                            <div class="style1">
+                                <a href="#"><i class="fi fi-sr-messages"></i></a>
+                                <p>Message</p>
+                            </div>
+                            <div class="right">
+                                <span>10%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card single-box bg2">
+                        <div class="card-body">
+                            <div class="style2">
+                                <a href="#"><i class="fi fi-sr-envelope-dot"></i></a>
+                                <p>Email</p>
+                            </div>
+                            <div class="right">
+                                <span>30%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card single-box bg3">
+                        <div class="card-body">
+                            <div class="style3">
+                                <a href="#"><i class="fi fi-sr-comment-alt"></i></a>
+                                <p>Comments</p>
+                            </div>
+                            <div class="right">
+                                <span>8.7k</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card single-box bg4">
+                        <div class="card-body">
+                            <div class="style4">
+                                <a href="#"><i class="fi fi-br-social-network"></i></a>
+                                <p>likes</p>
+                            </div>
+                            <div class="right">
+                                <span>1.7m</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card style1">
+                        <div class="card-header">
+                            <h2 class="card-title">Total Users</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="count">5,000</p>
+                            <a href="#">view</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card style2">
+                        <div class="card-header">
+                            <h2 class="card-title">Requests Pending</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="count">1,002</p>
+                            <a href="#">view</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card style3">
+                        <div class="card-header">
+                            <h2 class="card-title">Requests Pending</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="count">1,002</p>
+                            <a href="#">view</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card style4">
+                        <div class="card-header">
+                            <h2 class="card-title">Requests Pending</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="count">1,002</p>
+                            <a href="#">view</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card style1 bg">
+                        <div class="card-header">
+                            <h2 class="card-title">Total Users</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="count">5,000</p>
+                            <a href="#">view</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card style2 bg">
+                        <div class="card-header">
+                            <h2 class="card-title">Requests Pending</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="count">1,002</p>
+                            <a href="#">view</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card style3 bg">
+                        <div class="card-header">
+                            <h2 class="card-title">Requests Pending</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="count">1,002</p>
+                            <a href="#">view</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card style4 bg">
+                        <div class="card-header">
+                            <h2 class="card-title">Requests Pending</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="count">1,002</p>
+                            <a href="#">view</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="title">Card Title</h2>
+                        </div>
+                        <div class="card-body">
+                            <p>Lorem ipsum dolor, sit ametipsum dolor, sit ametipsum dolor, sit amet consectetur adipisicing elit. Iure, aspernatur?</p>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="themeBtn">submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="title">Card Title</h2>
+                        </div>
+                        <div class="card-body center">
+                            <p>Lorem ipsum dolor, sit ametipsum dolor, sit ametipsum dolor, sit amet consectetur adipisicing elit. Iure, aspernatur?</p>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="themeBtn">submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header right">
+                            <h2 class="title">Card Title</h2>
+                        </div>
+                        <div class="card-body right">
+                            <p>Lorem ipsum dolor, sit ametipsum dolor, sit ametipsum dolor, sit amet consectetur adipisicing elit. Iure, aspernatur?</p>
+                            
+                        </div>
+                        <div class="card-footer right">
+                            <button type="button" class="themeBtn">submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card overlay">
+                        <img src="resources/images/overlay1.png" class="card-img" alt="background-image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+                                This content is a little bit longer.</p>
+                            <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card overlay">
+                        <img src="resources/images/overlay2.jpg" class="card-img" alt="background-image">
+                        <div class="card-img-overlay center">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+                                This content is a little bit longer.</p>
+                            <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card overlay">
+                        <img src="resources/images/overlay3.jpg" class="card-img" alt="background-image">
+                        <div class="card-img-overlay down">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+                                This content is a little bit longer.</p>
+                            <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card chat-box">
+                        <div class="card-header">
+                            <div class="left">
+                                <img src="resources/images/user.png" alt="user-image">
+                                <h5 class="name">User Name</h5>
+                                <span>Active</span>
+                            </div>
+                            <div class="right">
+                                <i class="fi fi-rr-template-alt"></i>
+                                <div class="math">
+                                    <span class="minus"></span>
+                                    <span class="plus"></span>
+                                </div>
+                                <i class="fi fi-br-cross"></i>
+
+                            </div>
+                        </div>
+                        <div class="card-body"></div>
+                        <div class="card-footer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main section end -->
+    </main>
+    <!-- Main content area end -->
+
+    <!-- main footer start -->
+    <footer class="main-footer">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="copyright">
+                    <p>Copyright &copy; 2024 || <span id="currentDate"></span> All rights reserved.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="version text-end">
+                    <p>Version 1.0</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- main footer end -->
+
+    <!-- Jquery JS -->
+    <script src="resources/js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap Js -->
+    <script src="resources/js/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="resources/js/echarts.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script> -->
+    <script src="resources/js/charts.js"></script>
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Custom Js -->
+    <script src="resources/js/custom.js"></script>
+
+</body>
+</html>

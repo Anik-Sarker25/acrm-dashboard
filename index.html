@@ -105,7 +105,7 @@
                                                 <div class="notification-item">
                                                     <div class="d-flex">
                                                         <div class="img">
-                                                            <img src="resources/images/notification1.png" class="notification-image" width="32px" alt="flag-image">
+                                                            <img src="resources/images/notification2.png" class="notification-image" width="32px" alt="flag-image">
                                                         </div>
                                                         <div class="info">
                                                             <div class="d-flex justify-content-between">
@@ -139,7 +139,7 @@
                                                 <div class="notification-item">
                                                     <div class="d-flex">
                                                         <div class="img">
-                                                            <img src="resources/images/notification1.png" class="notification-image" width="32px" alt="flag-image">
+                                                            <img src="resources/images/notification3.png" class="notification-image" width="32px" alt="flag-image">
                                                         </div>
                                                         <div class="info">
                                                             <div class="d-flex justify-content-between">
@@ -326,20 +326,15 @@
 
                 <li class="nav-item">
                     <a class="nav-heading text" href="javascript::">
-                        CRM
+                        Widgets
                     </a>
                 </li>
+                
                 <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse">
-                        <i class="fi fi-sr-users-alt"></i>
-                        <span class="text">Clients</span>
+                    <a class="nav-link" href="widgets.html">
+                        <i class="fi fi-sr-transformation-block"></i>
+                        <span class="text">Widgets</span>
                     </a>
-                    <ul class="submenu collapse">
-                        <li><a class="nav-link" href="addClient.html">Add New</a></li>
-                        <li><a class="nav-link" href="#">Client List</a></li>
-                        <li><a class="nav-link" href="#">Client List B Group</a></li>
-                        <li><a class="nav-link" href="#">Client Group List</a></li>
-                    </ul>
                 </li>
 
                 <hr class="menu-divider">
@@ -414,12 +409,13 @@
                 <div class="col-md-8">
                     <div class="row">
                         <div class="col-md-4">
-                            <div class="card style1">
+                            <div class="card style1 bg">
                                 <div class="card-header">
-                                    <h2 class="card-title" id="sentence">title gose heere</h2>
+                                    <h2 class="card-title">Total Users</h2>
                                 </div>
                                 <div class="card-body">
-                                    <p>Lorem ipsum d adipisicing elit. Id, sequi?</p>
+                                    <p class="count">5,000</p>
+                                    <a href="#">view</a>
                                 </div>
                             </div>
                         </div>
@@ -448,12 +444,13 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="card style2">
+                            <div class="card style2 bg">
                                 <div class="card-header">
-                                    <h2 class="card-title">title</h2>
+                                    <h2 class="card-title">Requests Pending</h2>
                                 </div>
                                 <div class="card-body">
-                                    <p>Lorem ipsum dolor ipisicing elit. Velit, facere!</p>
+                                    <p class="count">1,002</p>
+                                    <a href="#">view</a>
                                 </div>
                             </div>
                         </div>
@@ -463,47 +460,61 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h2 class="card-title">title</h2>
+                                    <!-- <h2 class="card-title">title</h2> -->
                                 </div>
                                 <div class="card-body">
-                                    
+                                    <div id="chart1" style="width: 100%;height: 250px; margin: auto;"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-md-6">
                             <div class="card">
                                 <div class="card-header">
-                                    <h2 class="card-title">title</h2>
+                                    <!-- <h2 class="card-title">title</h2> -->
                                 </div>
                                 <div class="card-body">
-                                    
+                                    <div id="chart2" style="width: 100%;height: 200px; margin: auto;"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="card">
                                 <div class="card-header">
-                                    <h2 class="card-title">title</h2>
+                                    <!-- <h2 class="card-title">title</h2> -->
                                 </div>
                                 <div class="card-body">
-                                    
+                                    <div id="Doughnut" style="width: 100%;height: 200px; margin: auto;"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">title</h2>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <!-- <h2 class="card-title">title</h2> -->
+                                </div>
+                                <div class="card-body">
+                                    <div id="Nightingale" style="width: 100%;height: 250px; margin: auto;"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body">
-
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <!-- <h2 class="card-title">title</h2> -->
+                                </div>
+                                <div class="card-body">
+                                    <div id="ShangHai" style="width: 100%;height: 250px; margin: auto;"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -533,6 +544,9 @@
     <script src="resources/js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap Js -->
     <script src="resources/js/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="resources/js/echarts.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script> -->
+    <script src="resources/js/charts.js"></script>
     <!-- SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
