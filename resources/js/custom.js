@@ -106,5 +106,36 @@
     });
 
 
+    // function autoExpand(textarea) {
+    //     // Reset the textarea's height to fit one line of text
+    //     textarea.style.height = '1em';
+
+    //     // Calculate the scroll height of the textarea
+    //     var scrollHeight = textarea.scrollHeight;
+
+    //     // Set the textarea's height to fit the content if it's taller than one line
+    //     if (scrollHeight > textarea.clientHeight) {
+    //         textarea.style.height = scrollHeight + 'px';
+    //     }
+    // }
+
+    function autoExpand(textarea) {
+        var scrollTop = textarea.scrollTop;
+    
+        textarea.style.height = 'auto';
+        textarea.style.height = Math.min(textarea.scrollHeight, 100) + 'px';
+    
+        var scrollDiff = textarea.scrollHeight - textarea.clientHeight;
+    
+        if (scrollDiff > 0 && scrollTop === 0) {
+            textarea.scrollTop = scrollDiff;
+        }
+    }
+
+    $('#writeMsg').onclick(function() {
+        var lines = textarea.value.split('\n');
+        lines.reverse();
+        textarea.value = lines.join('\n');
+    });
 
 
