@@ -880,6 +880,11 @@ main .main-section {
         }
         .right {
             display: flex;
+            button {
+                padding: 0;
+                color: var(--main-body-color);
+                border: none;
+            }
             i {
                 font-size: 12px;
             }
@@ -905,6 +910,11 @@ main .main-section {
             .icons {
                 opacity: 0;
                 margin-right: 12px;
+                button {
+                    padding: 0;
+                    color: var(--main-body-color);
+                    border: none;
+                }
                 i {
                     font-size: 12px;
                     cursor: pointer;
@@ -951,6 +961,11 @@ main .main-section {
             .icons {
                 opacity: 0;
                 margin-left: 12px;
+                button {
+                    padding: 0;
+                    color: var(--main-body-color);
+                    border: none;
+                }
                 i {
                     font-size: 12px;
                 }
@@ -1000,11 +1015,18 @@ main .main-section {
         border-top: 2px solid var(--divider-color);
         textarea {
             resize: none;
-            max-height: 100px;
+            max-height: 20px;
             background: transparent;
             color: var(--main-body-color);
             box-shadow: none;
             border: 1px solid var(--themeBtn-border-color);
+        }
+        textarea::-webkit-scrollbar {
+            width: 12px;
+        }
+        textarea::-webkit-scrollbar-thumb {
+            background: var(--main-header-bg-color);
+            border-radius: 3px;
         }
         textarea::placeholder {
             color: var(--main-body-color);
@@ -1056,6 +1078,10 @@ main .main-section {
         textarea {
             border: none;
         }
+        textarea::-webkit-scrollbar-thumb {
+            background: var(--card-style2-bg-color);
+            border-radius: 3px;
+        }
         button {
             opacity: .7;
             background: var(--card-style2-bg-color);
@@ -1095,6 +1121,10 @@ main .main-section {
         textarea {
             border: none;
         }
+        textarea::-webkit-scrollbar-thumb {
+            background: var(--card-style4-bg-color);
+            border-radius: 3px;
+        }
         button {
             opacity: .7;
             background: var(--card-style4-bg-color);
@@ -1107,6 +1137,294 @@ main .main-section {
 }
 
 
+
+.card.post-box {
+    padding: 0;
+    .card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px;
+        border-bottom: 2px solid var(--divider-color);
+        .left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-right: 10px;
+            img {
+                margin: var(--icon-margin-right);
+                border-radius: 50%;
+                background-color: var(--main-body-color);
+                width: 32px;
+                height: 32px;
+            }
+            h1,h2,h3,h4,h5,h6 {
+                font-size: 14px;
+                margin-bottom: 0;
+            }
+            span {
+                font-size: 12px;
+                display: block;
+            }
+            i {
+                margin-right: 5px;
+                align-items: center;
+            }
+        }
+        .left:hover {
+            cursor: pointer;
+            background: var(--main-body-bg-color);
+            border-radius: 5px;
+        }
+        .right {
+            display: flex;
+            button {
+                padding: 0;
+                color: var(--main-body-color);
+                border: none;
+            }
+            i {
+                font-size: 12px;
+            }
+            i::before {
+                padding: 10px;
+                background: transparent;
+                border-radius: 5px;
+            }
+            i:hover::before {
+                padding: 10px;
+                background: var(--main-body-bg-color);
+            }
+        }
+    }
+    .card-body {
+        padding: 0;
+        .post-content {
+            .content {
+                padding: 10px 16px;
+            }
+            .img {
+                img {
+                    width: 100%;
+                    height: 300px;
+                }
+            }
+            .lcs-status {
+                padding: 5px 16px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .status-left {
+                    a {
+                        margin-right: -8px;
+                    }
+                    span {
+                        margin-left: 10px;
+                    }
+                    span:hover {
+                        text-decoration: underline;
+                    }
+                }
+                .status-right {
+                    a {
+                        margin-left: var(--icon-margin-right);
+                    }
+                    a:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .lcs {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-top: 2px solid var(--divider-color);
+                border-bottom: 2px solid var(--divider-color);
+                button {
+                    color: var(--main-body-color);
+                    padding: 3px;
+                    display: block;
+                    width: 100%;
+                    margin: 5px;
+                }
+                button:hover {
+                    background: var(--themeBtn-hover-bg-color);
+                }
+            }
+        }
+        .post-messages {
+            padding: 0 16px;
+            max-height: 150px;
+            overflow-y: scroll;
+            .text {
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                margin: 20px 0;
+                .message {
+                    display: flex;
+                    max-width: 70%;
+                    .img {
+                        img {
+                            margin: var(--icon-margin-right);
+                            border-radius: 50%;
+                            background-color: var(--main-body-color);
+                            width: 32px;
+                            height: 32px;
+                        }
+                    }
+                    .info {
+                        background: var(--main-body-bg-color);
+                        padding: 10px;
+                        border-radius: 10px;
+                        p {
+                            font-size: 13px;
+                        }
+                    }
+                }
+                .icons {
+                    opacity: 0;
+                    margin-left: 12px;
+                    button {
+                        padding: 0;
+                        color: var(--main-body-color);
+                        border: none;
+                    }
+                    i {
+                        font-size: 12px;
+                    }
+                    i::before {
+                        padding: 8px;
+                        border-radius: 5px;
+                        background: transparent;
+                    }
+                    i:hover::before {
+                        background: var(--main-body-bg-color);
+                    }
+                }
+            }
+            .text:hover .icons {
+                opacity: 1;
+            }
+            .text.reply {
+                margin-left: 45px;
+            }
+        }
+        .post-messages::-webkit-scrollbar {
+            width: 12px;
+        }
+        .post-messages::-webkit-scrollbar-thumb {
+            background: var(--main-header-bg-color);
+            border-radius: 3px;
+        }
+        
+    }
+    .card-footer {
+        display: flex;
+        padding: 5px;
+        border-top: 2px solid var(--divider-color);
+        img {
+            vertical-align: middle;
+            margin-right: var(--icon-margin-right);
+            border-radius: 50%;
+            background-color: var(--main-body-color);
+            width: 36px;
+            height: 36px;
+        }
+        textarea {
+            resize: none;
+            max-height: 20px;
+            background: transparent;
+            color: var(--main-body-color);
+            box-shadow: none;
+            border: 1px solid var(--themeBtn-border-color);
+        }
+        textarea::-webkit-scrollbar {
+            width: 12px;
+        }
+        textarea::-webkit-scrollbar-thumb {
+            background: var(--main-header-bg-color);
+            border-radius: 3px;
+        }
+        textarea::placeholder {
+            color: var(--main-body-color);
+        }
+        .input-group {
+            border: none;
+            button {
+                margin-left: var(--icon-margin-right);
+                background: var(--main-body-bg-color);
+                border-radius: 5px;
+                color: var(--themeBtn-color);
+                i::before {
+                    vertical-align: middle;
+                }
+
+            }
+            button:hover {
+                background: var(--themeBtn-hover-bg-color);
+            }
+        }
+    }
+}
+.card.post-box.box2 {
+    .card-header {
+        background: var(--card-style4-bg-color);
+        border-bottom: 2px solid var(--color-style4);
+        .left:hover {
+            cursor: pointer;
+            background: var(--card-style4-bg-color);
+            border-radius: 5px;
+        } 
+        .right {
+            i:hover::before {
+                padding: 10px;
+                background: var(--card-style4-bg-color);
+            }
+        }
+    }
+    .card-body {
+        .post-content {
+            .lcs {
+                button:hover {
+                    padding: 3px;
+                    background: var(--card-style4-bg-color);
+                }
+            }
+        }
+        .post-messages {
+            .text {
+                .info {
+                    background: var(--card-style4-bg-color);
+                }
+            }
+            .text.reply {
+                .info {
+                    background: var(--main-body-bg-color);
+                }
+            }
+        }
+    }
+    .card-footer {
+        background: var(--card-style4-bg-color);
+        border-top: 2px solid var(--color-style4);
+        textarea {
+            border: none;
+        }
+        textarea::-webkit-scrollbar-thumb {
+            background: var(--card-style4-bg-color);
+            border-radius: 3px;
+        }
+        button {
+            opacity: .7;
+            background: var(--card-style4-bg-color);
+        }
+        button:hover {
+            opacity: 1;
+            background: var(--card-style4-bg-color);
+        }
+    }
+}
 
 
 
