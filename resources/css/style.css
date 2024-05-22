@@ -156,6 +156,18 @@ a {
     color: transparent;
     background: var(--nav-heading-color);
 }
+#sidebar .nav-item .nav-link.has-submenu::after {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url('../icons/angle-right.png');
+    background-size: cover;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
 #sidebar .menu-divider {
     border: none;
     height: 2px;
@@ -583,6 +595,13 @@ main .main-section {
     padding: var(--container-padding);
     color: var(--main-body-color);
 }
+.row-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px 0;
+    text-transform: capitalize;
+    color: var(--theme-secondary-color);
+}
 
 .card {
     background: var(--card-bg-color);
@@ -622,7 +641,6 @@ main .main-section {
         text-align: right;
     }
 }
-
 .card.style1 {
     min-height: 150px;
     .card-body {
@@ -703,7 +721,6 @@ main .main-section {
 .card.style4.bg {
     background-image: var(--card-style4-bg-color);
 }
-
 .card.single-box {
     .card-body {
         display: flex;
@@ -820,7 +837,6 @@ main .main-section {
         }
     }
 }
-
 .card.overlay {
     padding: 0;
     .card-img-overlay {
@@ -839,7 +855,6 @@ main .main-section {
     flex-direction: column;
     justify-content: flex-end;
 }
-
 .card.chat-box {
     padding: 0;
     .card-header {
@@ -1135,9 +1150,6 @@ main .main-section {
         }
     }
 }
-
-
-
 .card.post-box {
     padding: 0;
     .card-header {
