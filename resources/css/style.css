@@ -26,6 +26,7 @@ body {
     --nav-link-before-border-right-color: #020003;
     --nav-link-before-border-top-color: #000000;
     --nav-link-before-border-bottom-color: #84729c;
+    --has-submenu-icon: url('../icons/angle-right.png');
 
     --themeBtn-color: #ffffff;
     --themeBtn-hover-bg-color: #272b45;
@@ -69,6 +70,10 @@ body {
 a {
     text-decoration: none;
     color: var(--color);
+}
+i::before {
+    content: "";
+    vertical-align: middle;
 }
 
 /* =========== sidebar start =========== */
@@ -161,14 +166,23 @@ a {
     display: inline-block;
     width: 12px;
     height: 12px;
-    background-image: url('../icons/angle-right.png');
+    background-image: var(--has-submenu-icon);
     background-size: cover;
     position: absolute;
     right: 16px;
     top: 50%;
     transform: translateY(-50%);
+    transition: transform .3s;
 }
-#sidebar .menu-divider {
+#sidebar .nav-item .nav-link.has-submenu.toggled::after {
+    content: '';
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: rotate(90deg) translateX(-5px);
+    transition: transform .3s;
+}
+.menu-divider {
     border: none;
     height: 2px;
     margin-bottom: 0;
@@ -247,40 +261,122 @@ main.slide {
     margin-left: 70px !important;
 }
 input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
 input[type="search"],
 input[type="checkbox"],
 input[type="radio"],
+input[type="color"],
+input[type="file"],
+input[type="month"],
+input[type="range"],
+input[type="reset"],
+input[type="submit"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
 input[type="number"] {
     color: var(--input-color);
-    border: none;
     border-radius: 5px;
-    padding: 5px 10px;
     background: transparent;
-    box-shadow: none;
+    border: 2px solid var(--input-border-color) !important;
+    box-shadow: 0 5px 10px 0px rgb(28 41 75 / 50%) !important;
 }
 input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
 input[type="search"]:focus,
 input[type="checkbox"]:focus,
 input[type="radio"]:focus,
+input[type="color"]:focus,
+input[type="file"]:focus,
+input[type="month"]:focus,
+input[type="range"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+input[type="tel"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus,
 input[type="number"]:focus {
     color: var(--input-color);
-    border: none;
-    box-shadow: none;
+    box-shadow: none !important;
     background: none;
 }
 input[type="text"]::placeholder,
-input[type="search"]::placeholder {
+input[type="password"]::placeholder,
+input[type="number"]::placeholder,
+input[type="email"]::placeholder,
+input[type="date"]::placeholder,
+input[type="search"]::placeholder,
+input[type="checkbox"]::placeholder,
+input[type="radio"]::placeholder,
+input[type="color"]::placeholder,
+input[type="file"]::placeholder,
+input[type="month"]::placeholder,
+input[type="range"]::placeholder,
+input[type="reset"]::placeholder,
+input[type="submit"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="time"]::placeholder,
+input[type="url"]::placeholder,
+input[type="week"]::placeholder,
+input[type="number"]::placeholder {
     color: var(--input-placeholder-color);
 }
-.input-group {
+label {
+    margin-bottom: 8px;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    transform: scale(1.5);
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-left: 5px;
+} 
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    accent-color: var(--divider-color);
+}
+.search_style {
     border: 2px solid var(--input-border-color);
     border-radius: 10px;
 }
-.input-group span {
+.search_style input,
+.search_style span { 
     color: var(--input-color);
     background: var(--input-bg-color);
-    border: none;
-    padding: 5px 16px;
+    border: none !important;
+    padding-left: 16px;
+    display: block;
+    margin: auto;
+    i::before {
+        vertical-align: middle;
+        line-height: inherit;
+    }
+}
+.input-group{
+    border: 2px solid var(--input-border-color);
+    border-radius: 5px;
+}
+.input-group input,
+.input-group span { 
+    color: var(--input-color);
+    background: var(--input-bg-color);
+    border: none !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: block;
+    margin: auto;
+    i::before {
+        vertical-align: middle;
+        line-height: inherit;
+    }
 }
 .main-header .dash-info-bar {
     display: flex;
@@ -595,6 +691,8 @@ main .main-section {
     padding: var(--container-padding);
     color: var(--main-body-color);
 }
+
+/* =========== Widgets start =========== */
 .row-title {
     font-size: 20px;
     font-weight: 600;
@@ -602,7 +700,6 @@ main .main-section {
     text-transform: capitalize;
     color: var(--theme-secondary-color);
 }
-
 .card {
     background: var(--card-bg-color);
     margin: 10px 0;
@@ -1498,8 +1595,6 @@ main .main-section {
         }
     }
 }
-
-
 .card.widget2 {
     padding: 0;
     .card-header { 
@@ -1556,7 +1651,6 @@ main .main-section {
         }
     }
 }
-
 .card.widget3 {
     margin-top: 50px;
     .card-body {
@@ -1699,7 +1793,148 @@ main .main-section {
         } 
     }
 }
+/* =========== Widgets end =========== */
 
+/* =========== Forms start =========== */
+
+.table>:not(caption)>*>* {
+    color: #ffffff;
+    background: none;
+    border: none;
+}
+table.table-form,
+table.table-form2 {
+    thead {
+        tr {
+            background: transparent;
+            .sl {
+                width: 50px;
+            }
+            th {
+                font-size: 11px;
+                text-transform: uppercase;
+                label {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                font-size: 11px;
+                .input-group {
+                    border-radius: 5px;
+                }
+                input {
+                    font-size: 12px;
+                    box-shadow: 0 5px 10px 0px rgb(28 41 75 / 50%);
+                }
+                input[type="checkbox"] {
+                    transform: scale(2);
+                    vertical-align: middle;
+                    margin-top: 10px;
+                } 
+                input[type="checkbox"]:checked {
+                    accent-color: var(--divider-color);
+                }   
+            }
+        }
+    }
+}
+table.table-form2 {
+    thead {
+        tr {
+            th {
+                text-align: center;
+            }
+        }
+    }
+}
+table.table-form.style2,
+table.table-form2.style2 {
+    thead {
+        tr {
+            th {
+                font-size: 11px;
+                text-transform: uppercase;
+                label {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                font-size: 11spx;
+                .input-group {
+                    border-radius: 5px;
+                }
+                input {
+                    font-size: 12px;
+                    color: #333;
+                    background: #ffffff;
+                    box-shadow: 0 5px 10px 0px rgb(28 41 75 / 50%);
+                }
+                input::placeholder {
+                    color: #333;
+                }
+                input[type="checkbox"] {
+                    transform: scale(2);
+                    vertical-align: middle;
+                    margin-top: 10px;
+                } 
+                input[type="checkbox"]:checked {
+                    accent-color: var(--divider-color);
+                }   
+            }
+        }
+    }
+}
+.card.login-form {
+    padding: 0 0 10px 0;
+    .card-header {
+        background: var(--card-style4-bg-color);
+        margin-bottom: 10px;
+    }
+    .card-body {
+        input {
+            box-shadow: 0 5px 10px 0px rgb(0 0 0 / 50%) !important;
+        }
+        input:focus {
+            box-shadow: none !important;
+        }
+        input[type="checkbox"] {
+            accent-color: var(--color-style4);
+        }
+    }
+    .card-footer {
+        button {
+            background: var(--card-style4-bg-color);
+            color: var(--main-body-color);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 5px 10px;
+            border: 2px solid var(--color-style4);
+            border-radius: 5px;
+            opacity: .8;
+        }
+        button:hover {
+            opacity: 1;
+            border: 2px solid transparent;
+        }
+    }
+}
+.name-field {
+    display: flex;
+    align-items: center;
+    .form-control {
+        display: inline-block;
+    }
+}
+
+/* =========== Forms start =========== */
 
 
 

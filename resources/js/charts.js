@@ -883,19 +883,6 @@ function chart15() {
       }
     ]
   };
-  setInterval(function () {
-    myChart.setOption({
-      series: [
-        {
-          data: [
-            {
-              value: +(Math.random() * 100).toFixed(2)
-            }
-          ]
-        }
-      ]
-    });
-  }, 2000);
   initializeChart("chart15", option);
 }
 

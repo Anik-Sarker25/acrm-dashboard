@@ -46,9 +46,10 @@
     };
 
     $('.nav-item').on('click', function() {
-        let $submenu = $(this).find('.submenu');
-        $('.submenu').not($submenu).slideUp(300).removeClass('show');
-        $submenu.slideToggle(300).toggleClass('show');
+        let submenu = $(this).find('.submenu');
+        $(this).find('.has-submenu').toggleClass('toggled');
+        $('.submenu').not(submenu).slideUp(300).removeClass('show');
+        submenu.slideToggle(300).toggleClass('show');
     });
 
     let sidebar = document.querySelector("#sidebar");
@@ -103,6 +104,15 @@
                 $(".dropdown-menu").removeClass("show");
             }
         );
+
+        // for handling select2 
+        $('.select2').select2();
+
+        // for handling icon labels
+        $('.label').on('click', function() {
+            $(this).next('input').focus();
+        });
+
     });
 
 
@@ -132,10 +142,33 @@
         }
     }
 
-    $('#writeMsg').onclick(function() {
+    $('#writeMsg').on('click',function() {
         var lines = textarea.value.split('\n');
         lines.reverse();
         textarea.value = lines.join('\n');
     });
+
+    $(document).on('click', '.show_pass', function(e) {
+        let $container = $(this).closest('.input-group');
+        let $passwordField = $container.find('input');
+        let $iconField = $(this);
+    
+        if ($passwordField.length) {
+            if ($passwordField.attr('type') === 'password') {
+                $passwordField.attr('type', 'text');
+            } else {
+                $passwordField.attr('type', 'password');
+            }
+        }
+    
+        if ($iconField.hasClass('fi-sr-eye')) {
+            $iconField.removeClass('fi-sr-eye').addClass('fi-sr-eye-crossed');
+        } else {
+            $iconField.removeClass('fi-sr-eye-crossed').addClass('fi-sr-eye');
+        }
+    });
+
+    
+
 
 
