@@ -106,7 +106,9 @@
         );
 
         // for handling select2 
-        $('.select2').select2();
+        $('.select2').select2({
+            placeholder: "Select Option",
+        });
 
         // for handling icon labels
         $('.label').on('click', function() {
