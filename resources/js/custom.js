@@ -114,6 +114,17 @@
         $('.label').on('click', function() {
             $(this).next('input').focus();
         });
+        	
+        // let table = new DataTable('.');
+        new DataTable('.Datatable');
+        $('.Datatable2').DataTable({
+            "lengthMenu": [[3, 5, 10, 25, 50], [3, 5, 10, 25, 50]],
+            dom: '<"top"lfB>rt<"bottom"ip><"clear">',
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ],
+        }).page.len(5).draw();
+       
 
     });
 
@@ -169,6 +180,7 @@
             $iconField.removeClass('fi-sr-eye-crossed').addClass('fi-sr-eye');
         }
     });
+
 
     
 

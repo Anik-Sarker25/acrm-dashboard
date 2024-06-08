@@ -64,6 +64,8 @@ body {
     --card-bg-color: #171B2E;
     --container-padding: 10px 20px;
 
+    --table-header-background: #272B44;
+
     --header-menu-link-item-padding-two: 8px 16px;
     --link-font-size: 14px;
     --link-heading-font-size: 16px;
@@ -485,24 +487,30 @@ input[type="radio"]:checked {
     padding: 0;
     margin-right: var(--icon-margin-right);
 }
-.profile-menu .dropdown a .icon,
-.language-menu .dropdown a .icon,
-.notification-menu .dropdown a .icon,
+.profile-menu .dropdown a .icon, 
+.language-menu .dropdown a .icon, 
+.notification-menu .dropdown a .icon, 
 .appearance-menu .dropdown a .icon {
     background: var(--main-body-color);
     padding: 8px 10px 3px;
     border-radius: 50%;
-    i {
-        font-size: 18px;
-    }
-    span {
-        position: absolute;
-        top: 0;
-        left: 70%;
-        padding: 5px;
-        border-radius: 50%;
-        background: var(--color-red);
-    }
+}
+.profile-menu .dropdown a .icon i, 
+.language-menu .dropdown a .icon i, 
+.notification-menu .dropdown a .icon i, 
+.appearance-menu .dropdown a .icon i {
+    font-size: 18px;
+}
+.profile-menu .dropdown a .icon span, 
+.language-menu .dropdown a .icon span, 
+.notification-menu .dropdown a .icon span, 
+.appearance-menu .dropdown a .icon span {
+    position: absolute;
+    top: 0;
+    left: 70%;
+    padding: 5px;
+    border-radius: 50%;
+    background: var(--color-red);
 }
 .profile-menu .dropdown .profile,
 .language-menu .dropdown .profile,
@@ -1910,7 +1918,7 @@ table.table-form2.style2 tbody tr td input[type="checkbox"]:checked {
 /* =========== Highlighted dropdown option (hover or selected) =========== */
 .select2-results__option--highlighted {
     background: var(--card-bg-color) !important;
-    color: white;
+    color: #ffffff;
 }
 /* =========== select2 dropdown arrow =========== */
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
@@ -1996,7 +2004,7 @@ input.switch3:checked {
 }
 /* =========== switch end =========== */
 
-/* =========== input type file end =========== */
+/* =========== input type file start =========== */
 input[type="file"]::-webkit-file-upload-button {
     visibility: hidden;
 }
@@ -2011,7 +2019,172 @@ input[type="file"]::before {
 /* =========== input type file end =========== */
 
 
+/* =========== table start =========== */
+table, .table {
+    
+}
+table thead, .table thead {
+    background: var(--table-header-background);
+}
+table thead, .table tr {
+    border-color: var(--divider-color) !important;
+    vertical-align: middle;
+}
+.striped tbody tr:nth-child(even) {
+    background: var(--table-header-background);
+}
+.hover-table tr:hover {
+    background: var(--table-header-background);
+}
+.table-scroll {
+    height: 300px;
+}
+.table.header-fixed {
+    position: relative;
+}
+.table.header-fixed thead {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.table-image {
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+}
+/* =========== table end =========== */
+/* =========== DataTable start =========== */
+.dt-buttons {
+    float: left;
+    margin: 10px 0;
+}
+.dt-search {
+    float: right;
+    text-align: right;
+}
+.dataTables_paginate {
+    float: right;
+    text-align: right;
+}
+.dt-length label {
+    margin-left: 10px;
+}
+.dt-length select option {
+    background: var(--main-body-bg-color);
+    color: var(--card-color);
+    border: 1px solid var(--card-color) !important;
+}
+.dt-length select:focus {
+    outline: none;
+    border-color: var(--card-color) !important;
+}
+.dt-length select {
+    border-color: var(--card-color) !important;
+}
+.dt-length select option:checked { 
+    color: var(--card-color) !important;
+}
+div.dt-container div.dt-layout-row,
+.dt-container .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+button.dt-button, 
+div.dt-button, 
+a.dt-button {
+    color: var(--card-color);
+    background: var(--table-header-background);
+    border-radius: 5px;
+    padding: 5px 15px;
+    border-color: var(--divider-color);
+}
+button.dt-button:hover:not(.disabled), 
+div.dt-button:hover:not(.disabled), 
+a.dt-button:hover:not(.disabled){
+    color: var(--card-color);
+    background: var(--table-header-background);
+    border-radius: 5px;
+    padding: 5px 15px;
+    border-color: var(--card-color);
+}
+div.dt-container .dt-paging {
+    background: var(--table-header-background);
+    border-radius: 5px;
+}
+div.dt-container .dt-paging .dt-paging-button.previous:not(.disabled),
+div.dt-container .dt-paging .dt-paging-button.first:not(.disabled),
+div.dt-container .dt-paging .dt-paging-button.next:not(.disabled),
+div.dt-container .dt-paging .dt-paging-button.last:not(.disabled) {
+    color: var(--card-color) !important;
+    background: var(--main-body-bg-color) !important;
+    border-radius: 5px;
+    padding: 5px 15px;
+    border-color: var(--divider-color);
+    margin: 2px 0;
+}
+div.dt-container .dt-paging .dt-paging-button.disabled.previous:hover,
+div.dt-container .dt-paging .dt-paging-button.disabled.first:hover,
+div.dt-container .dt-paging .dt-paging-button.disabled.next:hover,
+div.dt-container .dt-paging .dt-paging-button.disabled.last:hover {
+    color: var(--card-color) !important;
+    background: var(--main-body-bg-color) !important;
+    border-radius: 5px;
+    padding: 5px 15px;
+    border-color: var(--divider-color);
+    margin: 2px 0;
+}
+div.dt-container .dt-paging .dt-paging-button {
+    background: transparent;
+    border-radius: 5px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    padding: 5px 15px;
+    margin-bottom: 0;
+}
+div.dt-container .dt-paging .dt-paging-button:hover {
+    background: var(--table-header-background);
+    border-radius: 5px;
+    border-left: 4px solid var(--main-body-bg-color);
+    border-right: 4px solid var(--main-body-bg-color);
+    padding: 5px 15px;
+    margin-bottom: 0;
+}
+div.dt-container .dt-paging .dt-paging-button.disabled  {
+    color: var(--card-color) !important;
+    padding: 5px 15px;
+    margin: 2px 0;
+}
+div.dt-container .dt-paging .dt-paging-button.disabled:hover  {
+    color: var(--card-color) !important;
+    background: var(--table-header-background) !important;
+    cursor: pointer;
+} 
+div.dt-container .dt-paging .dt-paging-button.current {
+    background: var(--table-header-background);
+    border-radius: 5px;
+    border-left: 4px solid var(--main-body-bg-color);
+    border-right: 4px solid var(--main-body-bg-color);
+    padding: 5px 15px;
+    margin-bottom: 0;
+    margin-right: 2px;
+}
+div.dt-container .dt-paging .dt-paging-button.current:hover {
+    border-left: 4px solid var(--main-body-bg-color);
+    border-right: 4px solid var(--main-body-bg-color);
+}
+/* =========== DataTable end =========== */
 
+button, .btn i::before {
+    vertical-align: middle;
+}
+button, .btn {
+    margin-bottom: 5px;
+}
 .themeBtn {
     color: var(--main-body-color);
     background: var(--main-body-bg-color);
