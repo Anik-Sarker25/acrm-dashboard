@@ -14,7 +14,7 @@ body {
     --color-style2: #d089c1;
     --color-style3: #757bc8;
     --color-style4: #b21e35;
-    --color-style5: #ffe604;
+    --color-style5: #d9c50a;
     --color-style6: #0cb1fd;
     --color-style7: #2f0fff;
     --color-style7: #ff22f0;
@@ -1635,7 +1635,7 @@ main .main-section {
 }
 .card.widget3 .card-body .counter .item {
     text-align: center;
-    margin: 0 5px;
+    margin: 5px;
     display: inline-block;
     font-size: 14px;
     padding: 7px;
@@ -2020,9 +2020,6 @@ input[type="file"]::before {
 
 
 /* =========== table start =========== */
-table, .table {
-    
-}
 table thead, .table thead {
     background: var(--table-header-background);
 }
@@ -2177,7 +2174,75 @@ div.dt-container .dt-paging .dt-paging-button.current:hover {
     border-left: 4px solid var(--main-body-bg-color);
     border-right: 4px solid var(--main-body-bg-color);
 }
+table.dataTable th.dt-type-numeric {
+    text-align: left;
+}
+.hideColumnDropdown .dropdown-toggle::after {
+    margin-left: 10px;
+}
+.hideColumnDropdown .dropdown-toggle {
+    color: var(--card-color);
+    background: var(--table-header-background);
+    border-radius: 5px;
+    padding: 5px 15px;
+    border-color: var(--divider-color);
+}
+.dropdown-menu#hideButtons {
+    background: #d0d0d1;
+    padding: 0;
+}
+.dropdown-menu#hideButtons li a {
+    border: 2px solid transparent;
+    color: var(--card-color);
+    background: var(--table-header-background);
+    border-radius: 5px;
+    padding: 5px 15px;
+    border-color: var(--divider-color);
+    margin-bottom: 0;
+}
+.dropdown-menu#hideButtons li a:hover {
+    background: #d0d0d1 !important;
+    transition: 0s;
+    border: 2px solid #8888b138;
+}
+.dropdown-menu#hideButtons li a.addBorder {
+    background: #d0d0d1 !important;
+    border: 2px solid #8888b138 !important;
+}
 /* =========== DataTable end =========== */
+/* =========== Alert start =========== */
+.alert {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.alert.corner {
+    border-radius: 0;
+}
+.alert.corner1 {
+    border-radius: 0;
+    border-left: 4px solid white;
+}
+.alert p, b, strong, span {
+    color: var(--card-color);
+}
+.alert i {
+    margin-right: var(--icon-margin-right);
+    vertical-align: middle;
+}
+.alert i::before {
+    vertical-align: middle;
+}
+.alert .closeBtn {
+    color: #fff;
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 3%;
+    margin-bottom: 0;
+}
+/* =========== Alert end =========== */
 
 button, .btn i::before {
     vertical-align: middle;

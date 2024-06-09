@@ -23,9 +23,6 @@
     <!-- Data Table CSS -->
     <link href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css">
-
-    <!-- Select2 CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" type="text/css">
     <!-- Bootstrap CSS -->
     <link href="resources/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <!-- Custom CSS -->
@@ -378,8 +375,7 @@
                         <span class="text">Components</span>
                     </a>
                     <ul class="submenu collapse">
-                        <li><a class="nav-link" href="#">Colors</a></li>
-                        <li><a class="nav-link" href="#">Alerts & badges</a></li>
+                        <li><a class="nav-link" href="alerts.html">Alerts & badges</a></li>
                         <li><a class="nav-link" href="#">Buttons & Icons</a></li>
                         <li><a class="nav-link" href="#">Sliders</a></li>
                         <li><a class="nav-link" href="#">Dropdowns</a></li>
@@ -988,14 +984,20 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <h2 class="title">Hovered Data Table with export buttons</h2>
+                            <h2 class="title">Hovered Data Table with multiple options</h2>
+                            <div class="dropdown hideColumnDropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-auto-close="outside" data-bs-toggle="dropdown">Hide Columns</button>
+                                <ul class="dropdown-menu" id="hideButtons">
+
+                                </ul>
+                            </div>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered hover-table Datatable2">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
+                                            <th>Id</th>
                                             <th>Image</th>
                                             <th>Username</th>
                                             <th>Name</th>
@@ -1118,11 +1120,7 @@
     <script src="resources/js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap Js -->
     <script src="resources/js/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="resources/js/echarts.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
-    <script src="resources/js/charts.js"></script>
-    <!-- SweetAlert2 -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- DataTables JS -->
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
@@ -1132,8 +1130,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js"></script>
-    
-
 
     <!-- Custom Js -->
     <script src="resources/js/custom.js"></script>

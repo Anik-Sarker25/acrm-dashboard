@@ -34,7 +34,7 @@
             <div class="col-md-5">
                 <div class="search-bar">
                     <div class="form-group">
-                        <div class="input-group">
+                        <div class="input-group search_style">
                             <!-- <span></span> -->
                             <span class="input-group-text"><i class="fi fi-rr-search"></i></span>
                             <input type="search" class="form-control" placeholder="Search...">
@@ -316,7 +316,7 @@
         <div class="position-sticky" id="sidebar-start">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">
+                    <a class="nav-link active" href="index.html">
                         <i class="fi fi-tr-dashboard"></i>
                         <span class="text">Dashboard</span>
                     </a>
@@ -344,15 +344,106 @@
                         Elements  
                     </a>
                 </li>
-
+                
                 <li class="nav-item">
-                    <a class="nav-link active" href="charts.html">
+                    <a class="nav-link" href="charts.html">
                         <i class="fi fi-sr-chart-set-theory"></i>
                         <span class="text">Graphs & Charts</span>
                     </a>
                 </li>
                 
+                <li class="nav-item">
+                    <a class="nav-link" href="forms.html">
+                        <i class="fi fi-sr-file-edit"></i>
+                        <span class="text">Forms</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="tables.html">
+                        <i class="fi fi-sr-grid-alt"></i>
+                        <span class="text">Tables</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link has-submenu" href="#" data-bs-toggle="collapse">
+                        <i class="fi fi-sr-flux-capacitor"></i>
+                        <span class="text">Components</span>
+                    </a>
+                    <ul class="submenu collapse">
+                        <li><a class="nav-link" href="alerts.html">Alerts & badges</a></li>
+                        <li><a class="nav-link" href="#">Buttons & Icons</a></li>
+                        <li><a class="nav-link" href="#">Sliders</a></li>
+                        <li><a class="nav-link" href="#">Dropdowns</a></li>
+                        <li><a class="nav-link" href="#">Nav & Tabs</a></li>
+                        <li><a class="nav-link" href="#">Models</a></li>
+                        <li><a class="nav-link" href="#">Others</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="charts.html">
+                        <i class="fi fi-sr-layout-fluid"></i>
+                        <span class="text">Gallery</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link has-submenu" href="#" data-bs-toggle="collapse">
+                        <i class="fi fi-sr-browsers"></i>
+                        <span class="text">Pages</span>
+                    </a>
+                    <ul class="submenu collapse">
+                        <li><a class="nav-link" href="#">Profile Page</a></li>
+                        <li><a class="nav-link" href="#">Login Page</a></li>
+                        <li><a class="nav-link" href="#">Registration Page</a></li>
+                        <li><a class="nav-link" href="#">Invoice Page</a></li>
+                        <li><a class="nav-link" href="#">404 Page</a></li>
+                    </ul>
+                </li>
+                
                 <hr class="menu-divider">
+
+                <li class="nav-item">
+                    <a class="nav-heading text" href="javascript::">
+                        Others  
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="charts.html">
+                        <i class="fi fi-rr-audit"></i>
+                        <span class="text">Search Bars</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link has-submenu" href="#" data-bs-toggle="collapse">
+                        <i class="fi fi-sr-envelope"></i>
+                        <span class="text">Mail Box</span>
+                    </a>
+                    <ul class="submenu collapse">
+                        <li><a class="nav-link" href="#">Compose</a></li>
+                        <li><a class="nav-link" href="#">Inbox</a></li>
+                        <li><a class="nav-link" href="#">Read</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="charts.html">
+                        <i class="fi fi-rr-poll-h"></i>
+                        <span class="text">Documentation</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="charts.html">
+                        <i class="fi fi-br-exit"></i>
+                        <span class="text">Log out</span>
+                    </a>
+                </li>
+
             </ul>
         </div>
     </aside>
@@ -360,176 +451,113 @@
 
     <!-- Main content area start -->
     <main id="main-content">
+
         <!-- main section start -->
         <div class="main-section">
-            <!-- pie Chart  -->
-            <h2 class="row-title">Pie Chart</h2>
+            <!-- general form -->
+            <h2 class="row-title">Alerts</h2>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-header">
-                            <!-- <h2 class="card-title">title</h2> -->
-                        </div>
-                        <div class="card-body">
-                            <div id="chart1" style="width: 100%;height: 200px; margin: auto;"></div>
-                        </div>
+                    <div class="alert bg-primary show fade">
+                        <i class="fi fi-sr-comment-info"></i>
+                        <p>order placed successfully!</p>
+                        <button type="button" class="closeBtn" data-bs-dismiss="alert">x</button>
+                    </div>
+                    <div class="alert bg-info show fade">
+                        <i class="fi fi-br-info"></i>
+                        <p>order placed successfully!</p>
+                        <button type="button" class="closeBtn" data-bs-dismiss="alert">x</button>
+                    </div>
+                    <div class="alert bg-secondary show fade">
+                        <i class="fi fi-rr-radiation"></i>
+                        <p>order placed successfully!</p>
+                        <button type="button" class="closeBtn" data-bs-dismiss="alert">x</button>
+                    </div>
+                    <div class="alert bg-warning show fade">
+                        <i class="fi fi-br-triangle-warning"></i>
+                        <p>order placed successfully!</p>
+                        <button type="button" class="closeBtn" data-bs-dismiss="alert">x</button>
+                    </div>
+                    <div class="alert bg-success show fade">
+                        <i class="fi fi-br-check-circle"></i>
+                        <p>order placed successfully!</p>
+                        <button type="button" class="closeBtn" data-bs-dismiss="alert">x</button>
+                    </div>
+                    <div class="alert bg-danger show fade">
+                        <i class="fi fi-rr-radiation"></i>
+                        <p>order placed successfully!</p>
+                        <button type="button" class="closeBtn" data-bs-dismiss="alert">x</button>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-header">
-                            <!-- <h2 class="card-title">title</h2> -->
-                        </div>
-                        <div class="card-body">
-                            <div id="chart2" style="width: 100%;height: 200px; margin: auto;"></div>
-                        </div>
+                    <div class="alert corner bg-primary show fade">
+                        <i class="fi fi-sr-comment-info"></i>
+                        <p>order placed successfully!</p>
+                        <button type="button" class="closeBtn" data-bs-dismiss="alert">x</button>
+                    </div>
+                    <div class="alert corner bg-info show fade">
+                        <i class="fi fi-br-info"></i>
+                        <p>order placed successfully!</p>
+                        <button type="button" class="closeBtn" data-bs-dismiss="alert">x</button>
+                    </div>
+                    <div class="alert corner bg-secondary show fade">
+                        <i class="fi fi-rr-radiation"></i>
+                        <p>order placed successfully!</p>
+                        <button type="button" class="closeBtn" data-bs-dismiss="alert">x</button>
+                    </div>
+                    <div class="alert corner bg-warning show fade">
+                        <i class="fi fi-br-triangle-warning"></i>
+                        <p>order placed successfully!</p>
+                        <button type="button" class="closeBtn" data-bs-dismiss="alert">x</button>
+                    </div>
+                    <div class="alert corner bg-success show fade">
+                        <i class="fi fi-br-check-circle"></i>
+                        <p>order placed successfully!</p>
+                        <button type="button" class="closeBtn" data-bs-dismiss="alert">x</button>
+                    </div>
+                    <div class="alert corner bg-danger show fade">
+                        <i class="fi fi-rr-radiation"></i>
+                        <p>order placed successfully!</p>
+                        <button type="button" class="closeBtn" data-bs-dismiss="alert">x</button>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-header">
-                            <!-- <h2 class="card-title">title</h2> -->
-                        </div>
-                        <div class="card-body">
-                            <div id="chart3" style="width: 100%;height: 200px; margin: auto;"></div>
-                        </div>
+                    <div class="alert corner1 bg-primary show fade">
+                        <i class="fi fi-sr-comment-info"></i>
+                        <p>order placed successfully!</p>
+                        <button type="button" class="closeBtn" data-bs-dismiss="alert">x</button>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-header">
-                            <!-- <h2 class="card-title">title</h2> -->
-                        </div>
-                        <div class="card-body">
-                            <div id="chart4" style="width: 100%;height: 250px; margin: auto;"></div>
-                        </div>
+                    <div class="alert corner1 bg-info show fade">
+                        <i class="fi fi-br-info"></i>
+                        <p>order placed successfully!</p>
+                        <button type="button" class="closeBtn" data-bs-dismiss="alert">x</button>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-header">
-                            <!-- <h2 class="card-title">title</h2> -->
-                        </div>
-                        <div class="card-body">
-                            <div id="chart5" style="width: 100%;height: 250px; margin: auto;"></div>
-                        </div>
+                    <div class="alert corner1 bg-secondary show fade">
+                        <i class="fi fi-rr-radiation"></i>
+                        <p>order placed successfully!</p>
+                        <button type="button" class="closeBtn" data-bs-dismiss="alert">x</button>
+                    </div>
+                    <div class="alert corner1 bg-warning show fade">
+                        <i class="fi fi-br-triangle-warning"></i>
+                        <p>order placed successfully!</p>
+                        <button type="button" class="closeBtn" data-bs-dismiss="alert">x</button>
+                    </div>
+                    <div class="alert corner1 bg-success show fade">
+                        <i class="fi fi-br-check-circle"></i>
+                        <p>order placed successfully!</p>
+                        <button type="button" class="closeBtn" data-bs-dismiss="alert">x</button>
+                    </div>
+                    <div class="alert corner1 bg-danger show fade">
+                        <i class="fi fi-rr-radiation"></i>
+                        <p>order placed successfully!</p>
+                        <button type="button" class="closeBtn" data-bs-dismiss="alert">x</button>
                     </div>
                 </div>
             </div>
-            <!-- bar Chart  -->
-            <h2 class="row-title">Bar Chart</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <!-- <h2 class="card-title">title</h2> -->
-                        </div>
-                        <div class="card-body">
-                            <div id="chart6" style="width: 100%;height: 250px; margin: auto;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <!-- <h2 class="card-title">title</h2> -->
-                        </div>
-                        <div class="card-body">
-                            <div id="chart7" style="width: 100%;height: 250px; margin: auto;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <!-- <h2 class="card-title">title</h2> -->
-                        </div>
-                        <div class="card-body">
-                            <div id="chart8" style="width: 100%;height: 250px; margin: auto;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <!-- <h2 class="card-title">title</h2> -->
-                        </div>
-                        <div class="card-body">
-                            <div id="chart9" style="width: 100%;height: 250px; margin: auto;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- bar Chart  -->
-            <h2 class="row-title">Candlestick Chart</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <!-- <h2 class="card-title">title</h2> -->
-                        </div>
-                        <div class="card-body">
-                            <div id="chart10" style="width: 100%;height: 300px; margin: auto;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <!-- <h2 class="card-title">title</h2> -->
-                        </div>
-                        <div class="card-body">
-                            <div id="chart11" style="width: 100%;height: 300px; margin: auto;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- bar Chart  -->
-            <h2 class="row-title">Gauge Chart</h2>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="card">
-                        <div class="card-header">
-                            <!-- <h2 class="card-title">title</h2> -->
-                        </div>
-                        <div class="card-body">
-                            <div id="chart12" style="width: 100%;height: 250px; margin: auto;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card">
-                        <div class="card-header">
-                            <!-- <h2 class="card-title">title</h2> -->
-                        </div>
-                        <div class="card-body">
-                            <div id="chart13" style="width: 100%;height: 250px; margin: auto;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card">
-                        <div class="card-header">
-                            <!-- <h2 class="card-title">title</h2> -->
-                        </div>
-                        <div class="card-body">
-                            <div id="chart14" style="width: 100%;height: 250px; margin: auto;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card">
-                        <div class="card-header">
-                            <!-- <h2 class="card-title">title</h2> -->
-                        </div>
-                        <div class="card-body">
-                            <div id="chart15" style="width: 100%;height: 250px; margin: auto;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          
         </div>
         <!-- main section end -->
+
     </main>
     <!-- Main content area end -->
 
@@ -554,8 +582,6 @@
     <script src="resources/js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap Js -->
     <script src="resources/js/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="resources/js/echarts.min.js"></script>
-    <script src="resources/js/charts.js"></script>
 
     <!-- Custom Js -->
     <script src="resources/js/custom.js"></script>
