@@ -1134,5 +1134,37 @@
     <!-- Custom Js -->
     <script src="resources/js/custom.js"></script>
 
+    <script>
+                // let table = new DataTable('.');
+                new DataTable('.Datatable');
+        let dataTable2 = $('.Datatable2').DataTable({
+            "lengthMenu": [[3, 5, 10, 25, 50], [3, 5, 10, 25, 50]],
+            dom: '<"top"lfB>rt<"bottom"ip><"clear">',
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ],
+        }).page.len(5).draw();
+
+        $(document).on('click', 'a.toggle-vis', function(e) {
+            e.preventDefault();
+            $(this).toggleClass('addBorder');
+            let columnIdx = $(this).data('column');
+            let column = dataTable2.column(columnIdx);
+
+            // Toggle the visibility
+            column.visible(!column.visible());
+        });
+
+        var columnButtons = "";
+        dataTable2.columns().every(function(index) {
+            var columnName = $(dataTable2.column(index).header()).text();
+            columnButtons += '<li><a class="btn d-block toggle-vis" href="javascript:;" data-column="' + index + '">' + columnName + '</a></li>';
+        });
+
+        setTimeout(() => {
+            $("#hideButtons").append(columnButtons);
+        }, 500);
+    </script>
+
 </body>
 </html>

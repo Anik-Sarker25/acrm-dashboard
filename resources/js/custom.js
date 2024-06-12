@@ -1,27 +1,4 @@
 
-
-
-    // Example usage of SweetAlert2
-    function fire() {
-        Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                Swal.fire(
-                    'Deleted!',
-                    'Your file has been deleted.',
-                    'success'
-                )
-            }
-        })
-    }
-
     // sentence conversion function
     // window.onload = function() {
     //     function toSentenceCase(text) {
@@ -85,6 +62,7 @@
     });
 
     $(document).ready(function () {
+
         // Prevent closing main dropdown when clicking on nested dropdown
         $(".dropdown-menu .dropdown-menu").on("click", function (e) {
             e.stopPropagation();
@@ -105,48 +83,146 @@
             }
         );
 
-        // for handling select2 
-        $('.select2').select2({
-            placeholder: "Select Option",
-        });
-
         // for handling icon labels
         $('.label').on('click', function() {
             $(this).next('input').focus();
         });
-        	
-        // let table = new DataTable('.');
-        new DataTable('.Datatable');
-        let dataTable2 = $('.Datatable2').DataTable({
-            "lengthMenu": [[3, 5, 10, 25, 50], [3, 5, 10, 25, 50]],
-            dom: '<"top"lfB>rt<"bottom"ip><"clear">',
-            buttons: [
-                'copy', 'csv', 'excel', 'pdf', 'print'
-            ],
-        }).page.len(5).draw();
 
-        $(document).on('click', 'a.toggle-vis', function(e) {
-            e.preventDefault();
-            $(this).toggleClass('addBorder');
-            let columnIdx = $(this).data('column');
-            let column = dataTable2.column(columnIdx);
+        // for handling select2 
+        if ($.fn.select2) {
+            // Initialize Select2
+            $('.select2').select2({
+                placeholder: "Select Option"
+            });
+        } else {
+            console.error("Select2 library is not loaded.");
+        }
 
-            // Toggle the visibility
-            column.visible(!column.visible());
-        });
 
-        var columnButtons = "";
-        dataTable2.columns().every(function(index) {
-            var columnName = $(dataTable2.column(index).header()).text();
-            columnButtons += '<li><a class="btn d-block toggle-vis" href="javascript:;" data-column="' + index + '">' + columnName + '</a></li>';
-        });
-
-        setTimeout(() => {
-            $("#hideButtons").append(columnButtons);
-        }, 500);
-       
     });
 
+
+
+    // alerts 
+    $('.alert1').on('click', function() {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                    'Deleted!',
+                    'Your file has been deleted.',
+                    'success'
+                )
+            }
+        })
+    });
+    $('.alert2').on('click', function() {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer;
+                toast.onmouseleave = Swal.resumeTimer;
+            }
+        });
+        Toast.fire({
+            icon: "success",
+            title: "Signed in successfully"
+        });
+    });
+    $('.alert3').on('click', function() {
+        Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Your work has been saved",
+        showConfirmButton: false,
+        timer: 1500
+        });
+    });
+    $('.alert4').on('click', function() {
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: "btn btn-success",
+                cancelButton: "btn btn-danger"
+            },
+            buttonsStyling: false
+        });
+        swalWithBootstrapButtons.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "delete",
+            cancelButtonText: "cancel",
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                swalWithBootstrapButtons.fire({
+                    title: "Deleted!",
+                    text: "Your file has been deleted.",
+                    icon: "success"
+                });
+            } else if (
+                result.dismiss === Swal.DismissReason.cancel
+            ) {
+                swalWithBootstrapButtons.fire({
+                    title: "Cancelled",
+                    text: "Your imaginary file is safe :)",
+                    icon: "error"
+                });
+            }
+        });
+    });
+    $('.alert5').on('click', function() {
+        Swal.fire({
+            title: "Do you want to save the changes?",
+            showDenyButton: true,
+            showCancelButton: true,
+            confirmButtonText: "Save",
+            denyButtonText: `Don't save`
+        }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire("Saved!", "", "success");
+        } else if (result.isDenied) {
+            Swal.fire("Changes are not saved", "", "info");
+        }
+        });
+    });
+    $('.alert6').on('click', function() {
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+            footer: '<a href="#">Why do I have this issue?</a>'
+        });
+    });
+
+    function CustomAlert(title, message, type) {
+        let html = `
+            <div class="alert al1 theme-${type} onTop show fade">
+                <div class="icon">
+                    <i class="fi fi-sr-comment-info"></i>
+                </div>
+                <div class="content">
+                    <h4>${title}</h4>
+                    <p>${message}</p>
+                </div>
+                <button type="button" class="closeBtn" data-bs-dismiss="alert">x</button>
+            </div>
+        `;
+
+        $('body').append(html);
+    }
 
     // function autoExpand(textarea) {
     //     // Reset the textarea's height to fit one line of text
