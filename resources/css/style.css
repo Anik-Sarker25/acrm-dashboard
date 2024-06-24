@@ -84,6 +84,9 @@ a {
     text-decoration: none;
     color: var(--color);
 }
+p {
+    margin-bottom: 0;
+}
 
 /* =========== theme background start =========== */
 .theme-primary {
@@ -768,7 +771,7 @@ main .main-section {
     color: var(--main-body-color);
 }
 
-/* =========== Widgets start =========== */
+/* =========== Widgets page start =========== */
 .row-title {
     font-size: 20px !important;
     font-weight: 600;
@@ -788,7 +791,13 @@ main .main-section {
     text-transform: capitalize;
     border-bottom: 0;
 }
-.card .card-header h1, h2, h3, h4, h5, h6 {
+.card .card-header h1
+.card .card-header h2
+.card .card-header h3
+.card .card-header h4
+.card .card-header h5
+.card .card-header h6
+.card .card-header p {
     font-size: 16px;
 }
 .card .card-header.right {
@@ -797,7 +806,13 @@ main .main-section {
 .card .card-body {
     padding: 0 16px;
 }
-.card .card-body h1, h2, h3, h4, h5, h6, p {
+.card .card-body h1,
+.card .card-body h2,
+.card .card-body h3,
+.card .card-body h4,
+.card .card-body h5,
+.card .card-body h6,
+.card .card-body p {
     font-size: 16px;
     margin-bottom: 0;
 }
@@ -910,7 +925,13 @@ main .main-section {
     padding: 5px;
     border-radius: 3px;
 }
-.card.single-box .card-body .style1 h1, h2, h3, h4, h5, h6, p {
+.card.single-box .card-body .style1 h1,
+.card.single-box .card-body .style1 h2,
+.card.single-box .card-body .style1 h3,
+.card.single-box .card-body .style1 h4,
+.card.single-box .card-body .style1 h5,
+.card.single-box .card-body .style1 h6,
+.card.single-box .card-body .style1 p {
     display: inline-block;
 }
 .card.single-box .card-body .style2 a {
@@ -923,7 +944,13 @@ main .main-section {
     padding: 5px;
     border-radius: 3px;
 }
-.card.single-box .card-body .style2 h1, h2, h3, h4, h5, h6, p{
+.card.single-box .card-body .style2 h1,
+.card.single-box .card-body .style2 h2,
+.card.single-box .card-body .style2 h3,
+.card.single-box .card-body .style2 h4,
+.card.single-box .card-body .style2 h5,
+.card.single-box .card-body .style2 h6,
+.card.single-box .card-body .style2 p {
     display: inline-block;
 }
 .card.single-box .card-body .style3 a {
@@ -936,7 +963,13 @@ main .main-section {
     padding: 5px;
     border-radius: 3px;
 }
-.card.single-box .card-body .style3 h1, h2, h3, h4, h5, h6, p {
+.card.single-box .card-body .style3 h1,
+.card.single-box .card-body .style3 h2,
+.card.single-box .card-body .style3 h3,
+.card.single-box .card-body .style3 h4,
+.card.single-box .card-body .style3 h5,
+.card.single-box .card-body .style3 h6,
+.card.single-box .card-body .style3 p {
     display: inline-block;
 }
 .card.single-box .card-body .style4 a {
@@ -949,7 +982,13 @@ main .main-section {
     padding: 5px;
     border-radius: 3px;
 }
-.card.single-box .card-body .style4 h1, h2, h3, h4, h5, h6, p {
+.card.single-box .card-body .style4 h1,
+.card.single-box .card-body .style4 h2,
+.card.single-box .card-body .style4 h3,
+.card.single-box .card-body .style4 h4,
+.card.single-box .card-body .style4 h5,
+.card.single-box .card-body .style4 h6,
+.card.single-box .card-body .style4 p {
     display: inline-block;
 }
 .card.single-box.bg1 {
@@ -1747,17 +1786,14 @@ main .main-section {
 .card.widget3.box3 .card-body .buttons a {
     background: var(--card-style4-bg-color);
 }
+/* =========== Widgets page end =========== */
 
-/* =========== Widgets end =========== */
-
-/* =========== Forms start =========== */
-
+/* =========== Forms page start =========== */
 .table>:not(caption)>*>* {
     color: #ffffff;
     background: none;
     border: none;
 }
-
 table.table-form thead tr, 
 table.table-form2 thead tr {
     background: transparent;
@@ -1880,7 +1916,7 @@ table.table-form2.style2 tbody tr td input[type="checkbox"]:checked {
 .name-field .form-control {
     display: inline-block;
 }
-/* =========== Forms end =========== */
+/* =========== Forms page end =========== */
 
 /* =========== Select2 start =========== */
 /* =========== Main container with multiple selections =========== */
@@ -2060,8 +2096,8 @@ input[type="file"]::before {
 }
 /* =========== input type file end =========== */
 
-
-/* =========== table start =========== */
+/* =========== Table page start =========== */
+/* =========== Simple table start =========== */
 table thead, .table thead {
     background: var(--table-header-background);
 }
@@ -2094,7 +2130,7 @@ table thead, .table tr {
     display: block;
     text-align: center;
 }
-/* =========== table end =========== */
+/* =========== Simple table end =========== */
 /* =========== DataTable start =========== */
 .dt-buttons {
     float: left;
@@ -2252,7 +2288,9 @@ table.dataTable th.dt-type-numeric {
     border: 2px solid #8888b138 !important;
 }
 /* =========== DataTable end =========== */
-/* =========== Alert start =========== */
+/* =========== Table page end =========== */
+
+/* =========== Alert & badge page start =========== */
 .alert {
     padding: 10px;
     display: flex;
@@ -2344,7 +2382,182 @@ div:where(.swal2-container) div:where(.swal2-actions) button {
     }
 }
 
-/* =========== Alert end =========== */
+/* =========== badge start =========== */
+/* =========== discount badge start =========== */
+.discountBadge,
+.discountBadgeBottom,
+.discountBadgeLeft,
+.discountRibbon,
+.discountRibbonBottom,
+.discountRibbonLeft {
+    background: var(--card-color);
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.discountBadge .discount {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 1;
+    display: inline-block;
+    font-size: 14px;
+}
+.discountBadge .discount::after {
+    position: absolute;
+    top: -24px;
+    right: -96px;
+    content: "";
+    height: 70px;
+    width: 210px;
+    transform: rotate(45deg);
+    background: #ff0000;
+    z-index:-1;
+}
+.discountBadgeBottom .discount {
+    position: absolute;
+    bottom: 5px !important;
+    left: 5px !important;
+    z-index: 1;
+    display: inline-block;
+    font-size: 14px;
+}
+.discountBadgeBottom .discount::after {
+    position: absolute;
+    bottom: -24px !important;
+    left: -96px !important;
+    content: "";
+    height: 70px;
+    width: 210px;
+    transform: rotate(45deg);
+    background: #ff0000;
+    z-index:-1;
+}
+.discountBadgeLeft .discount {
+    position: absolute;
+    top: 5px !important;
+    left: 5px !important;
+    z-index: 1;
+    display: inline-block;
+    font-size: 14px;
+}
+.discountBadgeLeft .discount::after {
+    position: absolute;
+    top: -24px !important;
+    left: -96px !important;
+    content: "";
+    height: 70px;
+    width: 210px;
+    transform: rotate(-45deg);
+    background: #ff0000;
+    z-index:-1;
+}
+.discountRibbon .discount {
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    z-index: 1;
+    display: inline-block;
+    font-size: 14px;
+    transform: rotate(45deg);
+}
+.discountRibbon .discount::after {
+    position: absolute;
+    top: -10px;
+    right: -96px;
+    content: "";
+    height: 40px;
+    width: 210px;
+    background: #ff0000;
+    z-index:-1;
+}
+.discountRibbonBottom .discount {
+    position: absolute;
+    bottom: 20px !important;
+    left: 5px !important;
+    z-index: 1;
+    display: inline-block;
+    font-size: 14px;
+    transform: rotate(45deg);
+}
+.discountRibbonBottom .discount::after {
+    position: absolute;
+    bottom: -10px !important;
+    left: -96px !important;
+    content: "";
+    height: 40px;
+    width: 210px;
+    background: #ff0000;
+    z-index:-1;
+}
+.discountRibbonLeft .discount {
+    position: absolute;
+    top: 20px !important;
+    left: 5px !important;
+    z-index: 1;
+    display: inline-block;
+    font-size: 14px;
+    transform: rotate(-45deg);
+}
+.discountRibbonLeft .discount::after {
+    position: absolute;
+    top: -10px !important;
+    left: -96px !important;
+    content: "";
+    height: 40px;
+    width: 210px;
+    background: #ff0000;
+    z-index:-1;
+}
+.discountBadge .content {
+    color: var(--card-bg-color);
+}
+/* =========== certification badge start =========== */
+/* .certificationBadge {
+    background: #ff0000;
+    padding: 16px;
+    text-align: center;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border: 3px solid #ffffff;
+    outline: 3px solid #ff1010;
+} */
+
+.certificationBadge .badge-content {
+    background: var(--card-bg-color);
+    text-align: center;
+    padding: 20px 0;
+    border: 5px solid var(--card-color);
+    outline: 5px solid var(--color-style4);
+    border-top-left-radius: 50% 20px;
+    border-top-right-radius: 50% 20px;
+    border-bottom-left-radius: 50% 100px;
+    border-bottom-right-radius: 50% 100px;
+    overflow: hidden;
+    position: relative;
+}
+.certificationBadge .badge-content .cerBtn {
+    background: var(--theme-bg-danger);
+    color: var(--card-color);
+    font-weight: bold;
+    width: 65%;
+}
+.certificationBadge .badge-content .cerBtn:hover {
+    filter: contrast(150%);
+}
+
+.certificationBadge.two .badge-content {
+    border: 5px solid var(--card-color);
+    outline: 5px solid var(--color-style6);
+}
+.certificationBadge.two .badge-content .cerBtn {
+    background: var(--card-style1-bg-color);
+}
+
+
+/* =========== badge end =========== */
+
+/* =========== Alert & badge page end =========== */
 
 
 
